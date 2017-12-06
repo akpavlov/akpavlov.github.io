@@ -1,0 +1,104 @@
+
+/**************************************** xs ************************************************/
+
+@media screen and (max-width: 767px) { 
+	.banner h2 {
+		font-size: 23px;
+	}
+
+	.about__img {
+		float: none;
+		margin-right: 0px;
+		margin-bottom: 40px;
+		width: 100%;
+	}
+
+	.about__services {
+		margin-right: 0px;
+	}
+
+	.about__services>div {
+		width: 50%;
+		margin-right: 0;
+		padding-right: 30px;
+	}
+
+	.about__services>div:nth-child(3) {
+		clear: both;
+	}
+
+	.contact__info, .contact__info h3 {
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 25px;
+	}
+
+	.news-and-video h3, .contact h3 {
+		text-align: center;
+	}
+
+}
+
+/**************************************** sm ************************************************/
+
+@media screen and (min-width: 768px) and (max-width: 991px) { 
+	.about__services {
+		clear: both;
+	}	
+
+	.about__services>div {
+		width: 25%;
+		margin-right: 0;
+		padding-right: 30px;
+	}
+
+	.contact__info, .contact__info h3 {
+		text-align: center;
+	}
+
+}
+
+/**************************************** md ************************************************/
+
+@media screen and (min-width: 992px) and (max-width: 1229px) { 
+
+	.about__services {
+		clear: both;
+	}	
+
+	.about__services>div {
+		width: 25%;
+		margin-right: 0;
+		padding-right: 30px;
+	}
+}
+
+/**************************************** md и менее ****************************************/
+
+@media screen and (max-width: 1229px) { 
+
+	.main-menu {
+		display: none;
+		position: fixed;
+		top: 0px;
+		right: 0;
+		width: auto;
+		height: auto;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+		padding: 0px;
+		z-index: 2;
+	}
+
+	.main-menu ul {
+		display: block;
+		height: auto
+	}
+
+	.main-menu a {
+		font-size: 12px;
+		padding: 14px 22px 14px 22px;
+	}
+
+}

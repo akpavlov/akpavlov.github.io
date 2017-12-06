@@ -1,0 +1,11 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+a {
+	font-weight: bold;
+}
+
+.email {
+	font-weight: normal;
+}
