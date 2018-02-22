@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Verdana, sans-serif;
+	text-align: center;	
+}
+
+h1 {
+	font-size: 40px;
+}
+
+section {
+	position: relative;
+	height: 600px;
+	padding-top: 220px;
+}
+
+.paralax {
+	overflow: hidden;
+	color: #fff;
+	
+}
+
+.paralax img {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: -400px;
+	z-index: -1;
+}

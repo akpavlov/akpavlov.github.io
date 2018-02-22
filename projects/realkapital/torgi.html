@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Торги</title>
+	<link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="header__row">
+				<a href="#" class="header__logo"><img src="images/logo-w.png" alt=""></a>
+				<div class="header__separ"></div>
+				<p class="header__description">
+					Торги<br>
+					Аукционы<br>
+					Конфискат<br>
+				</p>
+				<div class="header__tel">
+					<p>8 (800) 2000-600</p>
+					<p>По России звонок бесплатный</p>
+				</div>
+				<a href="#" class="header__vk">
+					Вступайте:<br>
+					<img src="images/vk.png" alt="">
+				</a>
+				<div class="header__basket">
+					<p class="header__login">
+						<a href="#">Войти</a>
+						<a href="#">Регистрация</a>	
+					</p>
+					<a href="#" class="header__basket-data">
+						<p>Корзина (3)</p>
+						<p>26 520 руб.</p>
+					</a>
+				</div>
+			</div> <!-- header__row -->
+		</div> <!-- container -->
+	</div> <!-- header -->
+
+	<div class="menu">
+		<div class="container">
+			<ul class="menu__row">
+				<li class="menu__item"><a href="#">О проекте</a></li>
+				<li class="menu__item"><a href="#">Торги</a></li>
+				<li class="menu__item"><a href="#">Тарифы</a></li>
+				<li class="menu__item"><a href="#">F.A.Q.</a></li>
+				<li class="menu__item"><a href="#">Контакты</a></li>
+			</ul> <!-- menu__row -->
+		</div> <!-- container -->
+	</div> <!-- menu -->
+
+	<div class="search search--lite">
+		<div class="container">
+			<h3>Поиск аукционов</h3>
+			<form action="#" class="search__form">
+				<div class="search__header">
+					<div class="search__header-controls">
+						<input type="text" placeholder="Введите фразу для поиска">
+						<button class="button">Искать</button>
+						<div>
+							<input type="checkbox" id="checkbox-1"><label for="checkbox-1">Точная фраза</label><br>
+							<input type="checkbox" id="checkbox-2"><label for="checkbox-2">Параметр</label>
+						</div>
+					</div> <!-- search__header-controls -->
+					<p>Например, земельный участок</p>
+				</div> <!-- search__header -->
+				<div class="search__body">
+					<div class="search__body-col">
+						<div class="search__control-row">
+							<div>Регион</div>
+							<div>
+								<select name="region" id="region">
+									<option selected value="Все регионы">Все регионы</option>
+								</select>
+							</div>
+						</div>
+						<div class="search__control-row">
+							<div>Тип торгов</div>
+							<div>
+								<select name="bidtype" id="bidtype">
+									<option selected value="Все торги">Все торги</option>
+								</select>
+							</div>
+						</div>
+						<div class="search__control-row">
+							<div>фильтр по цене</div>
+							<div class="search__filter__box">
+								<div class="filter__range"></div>
+							</div>
+						</div>
+						<div class="search__control-row">
+							<div></div>
+							<div class="search__two-inputs">
+								<input class="filter__begin" type="text" value="!!!от 90 000 руб.">
+								<input class="filter__end" type="text" value="!!!до 120 000 руб.">
+							</div>
+						</div>
+					</div> <!-- search__body-col -->
+					<div class="search__body-col">
+						<div class="search__control-row">
+							<div>Период</div>
+							<div>
+								<select name="period" id="period">
+									<option selected value="Все периоды">Все периоды</option>
+								</select>
+							</div>
+						</div>
+						<div class="search__control-row">
+							<div>Имущество</div>
+							<div>
+								<select name="estate" id="estate">
+									<option selected value="Все периоды">Все категории</option>
+								</select>
+							</div>
+						</div>
+						<div class="search__control-row">
+							<div>Сортировка</div>
+							<div>
+								<select name="sort" id="sort">
+									<option selected value="Все периоды">По дате добавления</option>
+								</select>
+							</div>
+						</div>
+						<div class="search__control-row">
+							<div>Фильтр по дате</div>
+							<div class="search__two-inputs">
+								<input type="text" value="от">
+								<input type="text" value="до">
+							</div>
+						</div>
+
+					</div> <!-- search__body-col -->
+				</div> <!-- search__body -->
+			</form> <!-- search__form -->
+		</div> <!-- container -->
+	</div> <!-- search -->
+
+	<div class="lots-header">
+		<div class="container">
+			<div class="lots-header__row">
+				<div>Найдено лотов 297</div>
+				<div>На странице 10 из 297</div>
+				<div class="lots-header__pages">
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a class="lots-header__pages-item--active" href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+				</div>
+				<div>Показывать:</div>
+				<select name="show" id="show">
+					<option value="По 10">По 10</option>
+				</select>
+			</div> <!-- lots-header__row -->
+		</div> <!-- container -->
+	</div> <!-- lots-header -->
+
+	<div class="lots">
+		<div class="container">
+
+			<div class="lot">
+				<div class="lot__sidebar">
+					<img src="images/lot-logo.png" alt="">
+					<p>Тип торгов<br><strong>Недвижимость</strong></p>
+					<p>Способ<br>Продажи<br><strong>Аукцион</strong></p>
+				</div>
+				<div class="lot__data">
+					<h3>Лот №12785</h3>
+					<div class="lot__data-row">
+						<img src="images/lot-img.jpg" alt="">
+						<div>
+							<p>
+								Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. м., адрес (местонахождение) объекта: Иркутская область, Иркутский р-н, в районе Ново-Иркутской ТЭЦ, кадастровый (или условный) номер 38:06:010902:20
+							</p>
+							<div class="lot__buttons">
+								<button class="button">В корзину</button>
+								<a href="#" class="show-lot" data-lot="12785">подробнее об объекте</a>
+							</div>
+						</div>
+					</div> <!-- lot__data-row -->
+				</div> <!-- lot__data -->
+				<div class="lot__params">
+					<div class="lot__price lot__price--up">570 000,00 руб.</div>
+					<div class="lot__date">
+						<p>Дата подачи заявок:</p>
+						<p>22.10.2017 10:00</p>
+					</div>
+					<div class="lot__date">
+						<p>Дата проведения:</p>
+						<p>25.10.2017 16:00</p>
+					</div>
+				</div> <!-- lot__params -->
+			</div> <!-- lot -->
+
+			<div class="lot">
+				<div class="lot__sidebar">
+					<img src="images/lot-logo.png" alt="">
+					<p>Тип торгов<br><strong>Недвижимость</strong></p>
+					<p>Способ<br>Продажи<br><strong>Аукцион</strong></p>
+				</div>
+				<div class="lot__data">
+					<h3>Лот №12785</h3>
+					<div class="lot__data-row">
+						<!-- <img src="images/lot-img.jpg" alt=""> -->
+						<div>
+							<p>
+								Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. м., адрес (местонахождение) объекта: Иркутская область, Иркутский р-н, в районе Ново-Иркутской ТЭЦ, кадастровый (или условный) номер 38:06:010902:20
+							</p>
+							<div class="lot__buttons">
+								<button class="button">В корзину</button>
+								<a href="#" class="show-lot" data-lot="12785">подробнее об объекте</a>
+							</div>
+						</div>
+					</div> <!-- lot__data-row -->
+				</div> <!-- lot__data -->
+				<div class="lot__params">
+					<div class="lot__price lot__price--up">470 000,00 руб.</div>
+					<div class="lot__date">
+						<p>Дата подачи заявок:</p>
+						<p>22.10.2017 10:00</p>
+					</div>
+					<div class="lot__date">
+						<p>Дата проведения:</p>
+						<p>25.10.2017 16:00</p>
+					</div>
+				</div> <!-- lot__params -->
+			</div> <!-- lot -->
+
+			<div class="lot">
+				<div class="lot__sidebar">
+					<img src="images/lot-logo.png" alt="">
+					<p>Тип торгов<br><strong>Недвижимость</strong></p>
+					<p>Способ<br>Продажи<br><strong>Аукцион</strong></p>
+				</div>
+				<div class="lot__data">
+					<h3>Лот №12785</h3>
+					<div class="lot__data-row">
+						<img src="images/lot-img.jpg" alt="">
+						<div>
+							<p>
+								Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. м., адрес (местонахождение) объекта: Иркутская область, Иркутский р-н, в районе Ново-Иркутской ТЭЦ, кадастровый (или условный) номер 38:06:010902:20
+							</p>
+							<div class="lot__buttons">
+								<button class="button">В корзину</button>
+								<a href="#" class="show-lot" data-lot="12785">подробнее об объекте</a>
+							</div>
+						</div>
+					</div> <!-- lot__data-row -->
+				</div> <!-- lot__data -->
+				<div class="lot__params">
+					<div class="lot__price lot__price--up">570 000,00 руб.</div>
+					<div class="lot__date">
+						<p>Дата подачи заявок:</p>
+						<p>22.10.2017 10:00</p>
+					</div>
+					<div class="lot__date">
+						<p>Дата проведения:</p>
+						<p>25.10.2017 16:00</p>
+					</div>
+				</div> <!-- lot__params -->
+			</div> <!-- lot -->
+
+			<div class="lot">
+				<div class="lot__sidebar">
+					<img src="images/lot-logo.png" alt="">
+					<p>Тип торгов<br><strong>Недвижимость</strong></p>
+					<p>Способ<br>Продажи<br><strong>Аукцион</strong></p>
+				</div>
+				<div class="lot__data">
+					<h3>Лот №12785</h3>
+					<div class="lot__data-row">
+						<!-- <img src="images/lot-img.jpg" alt=""> -->
+						<div>
+							<p>
+								Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. м., адрес (местонахождение) объекта: Иркутская область, Иркутский р-н, в районе Ново-Иркутской ТЭЦ, кадастровый (или условный) номер 38:06:010902:20
+							</p>
+							<div class="lot__buttons">
+								<button class="button">В корзину</button>
+								<a href="#" class="show-lot" data-lot="12785">подробнее об объекте</a>
+							</div>
+						</div>
+					</div> <!-- lot__data-row -->
+				</div> <!-- lot__data -->
+				<div class="lot__params">
+					<div class="lot__price lot__price--up">470 000,00 руб.</div>
+					<div class="lot__date">
+						<p>Дата подачи заявок:</p>
+						<p>22.10.2017 10:00</p>
+					</div>
+					<div class="lot__date">
+						<p>Дата проведения:</p>
+						<p>25.10.2017 16:00</p>
+					</div>
+				</div> <!-- lot__params -->
+			</div> <!-- lot -->
+
+			<div class="lot">
+				<div class="lot__sidebar">
+					<img src="images/lot-logo.png" alt="">
+					<p>Тип торгов<br><strong>Недвижимость</strong></p>
+					<p>Способ<br>Продажи<br><strong>Аукцион</strong></p>
+				</div>
+				<div class="lot__data">
+					<h3>Лот №12785</h3>
+					<div class="lot__data-row">
+						<!-- <img src="images/lot-img.jpg" alt=""> -->
+						<div>
+							<p>
+								Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. м., адрес (местонахождение) объекта: Иркутская область, Иркутский р-н, в районе Ново-Иркутской ТЭЦ, кадастровый (или условный) номер 38:06:010902:20
+							</p>
+							<div class="lot__buttons">
+								<button class="button">В корзину</button>
+								<a href="#" class="show-lot" data-lot="12785">подробнее об объекте</a>
+							</div>
+						</div>
+					</div> <!-- lot__data-row -->
+				</div> <!-- lot__data -->
+				<div class="lot__params">
+					<div class="lot__price lot__price--up">470 000,00 руб.</div>
+					<div class="lot__date">
+						<p>Дата подачи заявок:</p>
+						<p>22.10.2017 10:00</p>
+					</div>
+					<div class="lot__date">
+						<p>Дата проведения:</p>
+						<p>25.10.2017 16:00</p>
+					</div>
+				</div> <!-- lot__params -->
+			</div> <!-- lot -->
+
+		</div> <!-- container -->
+	</div> <!-- lots -->
+
+	<div class="lots-header lots-header--bottom">
+		<div class="container">
+			<div class="lots-header__row">
+				<div>Найдено лотов 297</div>
+				<div>На странице 10 из 297</div>
+				<div class="lots-header__pages">
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a class="lots-header__pages-item--active" href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+				</div>
+				<div>Показывать:</div>
+				<select name="show-bottom" id="show-bottom">
+					<option value="По 10">По 10</option>
+				</select>
+			</div> <!-- lots-header__row -->
+		</div> <!-- container -->
+	</div> <!-- lots-header -->
+
+	<div class="menu">
+		<div class="container">
+			<ul class="menu__row">
+				<li class="menu__item"><a href="#">О проекте</a></li>
+				<li class="menu__item"><a href="#">Торги</a></li>
+				<li class="menu__item"><a href="#">Тарифы</a></li>
+				<li class="menu__item"><a href="#">F.A.Q.</a></li>
+				<li class="menu__item"><a href="#">Контакты</a></li>
+			</ul> <!-- menu__row -->
+		</div> <!-- container -->
+	</div> <!-- menu -->
+
+	<div class="header header--footer">
+		<div class="container">
+			<div class="header__row">
+				<a href="#" class="header__logo"><img src="images/logo-b.png" alt=""></a>
+				<div class="header__separ header__separ--footer"></div>
+				<p class="header__description">
+					Торги<br>
+					Аукционы<br>
+					Конфискат<br>
+				</p>
+				<div class="header__tel">
+					<p>8 (800) 2000-600</p>
+					<p>По России звонок бесплатный</p>
+				</div>
+				<a href="#" class="header__vk header__vk--footer">
+					Вступайте:<br>
+					<img src="images/vk.png" alt="">
+				</a>
+				<div class="header__basket header__basket--footer">
+					<p class="header__login header__login--footer">
+						<a href="#">Войти</a>
+						<a href="#">Регистрация</a>	
+					</p>
+					<a href="#" class="header__basket-data header__basket-data--footer">
+						<p>Корзина (3)</p>
+						<p>26 520 руб.</p>
+					</a>
+				</div>
+			</div> <!-- header__row -->
+		</div> <!-- container -->
+	</div> <!-- header- -footer -->
+
+	<div class="popup-lot" id="lot-12785">
+		<div class="container">
+			<div class="single">
+				<div class="single__close"></div>
+				<div class="single__sidebar">
+					<div class="single__sidebar-box">
+						<img src="images/lot-logo.png" alt="">
+						<p>
+							Тип имущества<br>
+							<strong>Недвижимость</strong>
+						</p>
+					</div> <!-- single__sidebar-box -->
+				</div> <!-- single__sidebar -->
+				<div class="single__data">
+					<h3>Лот №12785</h3>
+					<div class="single__images">
+						<img class="single__big-image" src="#" alt="">
+						<div class="single__small-images">
+							<img src="images/lot-small-12785-1.jpg" class="single__small-image single__small-image--active" data-img="lot-big-12785-1.jpg" alt="">
+							<img src="images/lot-small-12785-2.jpg" class="single__small-image" data-img="lot-big-12785-2.jpg" alt="">
+							<img src="images/lot-small-12785-3.jpg" class="single__small-image" data-img="lot-big-12785-3.jpg" alt="">
+						</div>
+					</div> <!-- single__images -->
+					<p>
+						Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. 
+					</p>
+					<p>
+						Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. м., адрес (местонахождение) объекта: Иркутская область, Иркутский р-н, в районе Ново-Иркутской ТЭЦ, кадастровый (или условный) номер 38:06:010902:20 Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. м., адрес (местонахождение) объекта: Иркутская область, Иркутский р-н, в районе Ново-Иркутской ТЭЦ, кадастровый (или условный) номер 38:06:010902:20
+					</p>
+					<p>
+						Иркутская область, Иркутский р-н, в районе Ново-Иркутской ТЭЦ, кадастровый (или условный) номер 38:06:010902:20
+					</p>
+					<a href="#" class="button">В корзину</a>
+				</div> <!-- single__data -->
+				<div class="single__params">
+					<div class="single__price">570 000,00 руб.</div>
+					<div class="single__date">
+						<p>Дата подачи заявок:</p>
+						<p>22.10.2017 10:00</p>
+					</div>
+					<div class="single__date">
+						<p>Дата проведения:</p>
+						<p>25.10.2017 16:00</p>
+					</div>
+				</div> <!-- single__params -->
+			</div> <!-- single -->
+		</div> <!-- container -->
+	</div> <!-- popup-lot -->
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/range-slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Корзина</title>
+	<link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="header__row">
+				<a href="#" class="header__logo"><img src="images/logo-w.png" alt=""></a>
+				<div class="header__separ"></div>
+				<p class="header__description">
+					Торги<br>
+					Аукционы<br>
+					Конфискат<br>
+				</p>
+				<div class="header__tel">
+					<p>8 (800) 2000-600</p>
+					<p>По России звонок бесплатный</p>
+				</div>
+				<a href="#" class="header__vk">
+					Вступайте:<br>
+					<img src="images/vk.png" alt="">
+				</a>
+				<div class="header__basket">
+					<p class="header__login">
+						<a href="#">Войти</a>
+						<a href="#">Регистрация</a>	
+					</p>
+					<a href="#" class="header__basket-data">
+						<p>Корзина (3)</p>
+						<p>26 520 руб.</p>
+					</a>
+				</div>
+			</div> <!-- header__row -->
+		</div> <!-- container -->
+	</div> <!-- header -->
+
+	<div class="menu">
+		<div class="container">
+			<ul class="menu__row">
+				<li class="menu__item"><a href="#">О проекте</a></li>
+				<li class="menu__item"><a href="#">Торги</a></li>
+				<li class="menu__item"><a href="#">Тарифы</a></li>
+				<li class="menu__item"><a href="#">F.A.Q.</a></li>
+				<li class="menu__item"><a href="#">Контакты</a></li>
+			</ul> <!-- menu__row -->
+		</div> <!-- container -->
+	</div> <!-- menu -->
+
+	<div class="steps">
+		<div class="container">
+			<ul class="steps__row steps__row--1">
+				<li class="steps__item">Ваша корзина</li>
+				<li class="steps__item">оплата</li>
+				<li class="steps__item">подтверждение покупки</li>
+			</ul>
+		</div> <!-- container -->
+	</div> <!-- steps -->
+
+	<div class="basket">
+		<div class="container">
+			<div class="basket__header">
+				<p>В вашей корзине 3 товара</p>
+				<p>на сумму: 260,00 руб.</p>
+			</div> <!-- basket__header -->
+
+			<div class="basket-item">
+				<div class="basket-item__close"></div>
+				<div class="basket-item__sidebar">
+					<img src="images/lot-logo.png" alt="">
+					<p>Тип имущества<br><strong>Недвижимость</strong></p>
+				</div>
+				<div class="basket-item__data">
+					<h3>Лот №12785</h3>
+					<p>
+						Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. 	
+					</p>
+				</div>
+				<div class="basket-item__separ"></div>
+				<div class="basket-item__params">
+					<p>Цена</p>
+					<p>470 000,00 руб.</p>
+				</div>
+			</div> <!-- basket-item -->
+
+			<div class="basket-item">
+				<div class="basket-item__close"></div>
+				<div class="basket-item__sidebar">
+					<img src="images/lot-logo.png" alt="">
+					<p>Тип имущества<br><strong>Недвижимость</strong></p>
+				</div>
+				<div class="basket-item__data">
+					<h3>Лот №12785</h3>
+					<p>
+						Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. 	
+					</p>
+				</div>
+				<div class="basket-item__separ"></div>
+				<div class="basket-item__params">
+					<p>Цена</p>
+					<p>420 000,00 руб.</p>
+				</div>
+			</div> <!-- basket-item -->
+
+			<div class="basket-item">
+				<div class="basket-item__close"></div>
+				<div class="basket-item__sidebar">
+					<img src="images/lot-logo.png" alt="">
+					<p>Тип имущества<br><strong>Недвижимость</strong></p>
+				</div>
+				<div class="basket-item__data">
+					<h3>Лот №12785</h3>
+					<p>
+						Земельный участок, категория земель: земли населенных пунктов, разрешенное использование: для производственной базы, общая площадь 27 900 кв. 	
+					</p>
+				</div>
+				<div class="basket-item__separ"></div>
+				<div class="basket-item__params">
+					<p>Цена</p>
+					<p>370 000,00 руб.</p>
+				</div>
+			</div> <!-- basket-item -->
+
+		</div> <!-- container -->
+	</div> <!-- basket -->
+
+	<div class="payment">
+		<div class="container">
+			<div class="payment__row">
+				<form action="#" class="payment__item payment__discount">
+					<h3>Скидки</h3>
+					<div class="payment__discount-row">
+						<div class="payment__discount-controls">
+							<input type="text" placeholder="Введите промокод">
+							<button class="button">Активировать</button>
+						</div>
+						<div>
+							<p>Для оплаты заказа бонусами <a href="#"><span>авторизуйтесь</span></a></p>
+						</div>
+					</div>
+				</form> <!-- payment__discount -->
+				<div class="payment__item payment__method">
+					<h3>Выберите способ оплаты</h3>
+					<div class="payment__method-row">
+						<div>
+							<input type="radio" id="paypal" name="payment-method" value="paypal">
+							<label for="paypal">
+								<img src="images/paypal-logo.png" alt="">	
+							</label>		
+						</div>
+						<div>
+							<input type="radio" id="bitcoin" name="payment-method" value="bitcoin">
+							<label for="bitcoin">
+								<img src="images/bitcoin-logo.png" alt="">	
+							</label>		
+						</div>
+						<div>
+							<input type="radio" id="mastercard" name="payment-method" value="mastercard">
+							<label for="mastercard">
+								<img src="images/mastercard-logo.png" alt="">	
+							</label>		
+						</div>
+						<div>
+							<input type="radio" id="visa" name="payment-method" value="visa">
+							<label for="visa">
+								<img src="images/visa-logo.png" alt="">	
+							</label>		
+						</div>
+					</div> <!-- payment__method-row -->
+				</div> <!-- payment__method -->
+				<div class="payment__item payment__total">
+					<p><span>Товаров на сумму:</span><span>260,00 руб.</span></p>
+					<p><span>Скидка:</span><span>0 руб.</span></p>
+					<p><span>Итого к оплате:</span><span>260,00 руб.</span></p>
+					<div class="payment__total-button-box">
+						<button class="button">Оформить заказ</button>
+					</div>
+				</div> <!-- payment__total -->
+			</div> <!-- payment__row -->
+		</div> <!-- container -->
+	</div> <!-- payment -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	<div class="menu">
+		<div class="container">
+			<ul class="menu__row">
+				<li class="menu__item"><a href="#">О проекте</a></li>
+				<li class="menu__item"><a href="#">Торги</a></li>
+				<li class="menu__item"><a href="#">Тарифы</a></li>
+				<li class="menu__item"><a href="#">F.A.Q.</a></li>
+				<li class="menu__item"><a href="#">Контакты</a></li>
+			</ul> <!-- menu__row -->
+		</div> <!-- container -->
+	</div> <!-- menu -->
+
+	<div class="header header--footer">
+		<div class="container">
+			<div class="header__row">
+				<a href="#" class="header__logo"><img src="images/logo-b.png" alt=""></a>
+				<div class="header__separ header__separ--footer"></div>
+				<p class="header__description">
+					Торги<br>
+					Аукционы<br>
+					Конфискат<br>
+				</p>
+				<div class="header__tel">
+					<p>8 (800) 2000-600</p>
+					<p>По России звонок бесплатный</p>
+				</div>
+				<a href="#" class="header__vk header__vk--footer">
+					Вступайте:<br>
+					<img src="images/vk.png" alt="">
+				</a>
+				<div class="header__basket header__basket--footer">
+					<p class="header__login header__login--footer">
+						<a href="#">Войти</a>
+						<a href="#">Регистрация</a>	
+					</p>
+					<a href="#" class="header__basket-data header__basket-data--footer">
+						<p>Корзина (3)</p>
+						<p>26 520 руб.</p>
+					</a>
+				</div>
+			</div> <!-- header__row -->
+		</div> <!-- container -->
+	</div> <!-- header- -footer -->
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/range-slider.js"></script>
+</body>
+</html>

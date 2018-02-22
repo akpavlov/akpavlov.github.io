@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Карточка города</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/owl.theme.default.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/animate.custom.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__row">
+				<div class="mobile-menu-button mobile-menu-button--md md-show"></div>
+				<div class="mobile-menu-button mobile-menu-button--sm sm-show"></div>
+				<div class="header__logo">
+					<img src="images/logo.png" alt="">
+					<p class="lg-show">Начни новую жизнь с extour.net</p>
+				</div>
+				<div class="header__menu lg-show">
+					<ul>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Города</a></li>
+						<li><a href="#">Вопросы и ответы</a></li>
+						<li><a href="#">Галерея</a></li>
+						<li><a href="#">Еще</a></li>
+					</ul>
+				</div> <!-- header__menu-box -->
+				<div class="header__user sm-hide">
+					<a href="#" class="header__login">Вход</a>/
+					<a href="#" class="header__signup">Регистрация</a>
+				</div>
+			</div> <!-- header__row -->
+		</div> <!-- container -->
+		<div class="container header__menu-md-box">
+			<div class="header__menu-md"></div>
+		</div> <!-- container -->
+
+		<div class="header__menu-sm">
+			<div class="header__social">
+				<a href="#"><img src="images/social-fb.png" alt=""></a>
+				<a href="#"><img src="images/social-inst.png" alt=""></a>
+				<a href="#"><img src="images/social-tw.png" alt=""></a>
+				<a href="#"><img src="images/social-vk.png" alt=""></a>
+				<a href="#"><img src="images/social-ok.png" alt=""></a>
+			</div> <!-- header__social -->
+		</div> <!-- header__menu-sm -->
+
+	</header>
+
+	<div class="header__spacer"></div>
+
+	<div class="city-banner">
+		<div class="city-banner__static">
+			<div class="container">
+				<ul class="breadcrambs">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Города</a></li>
+					<li>Санкт-Петербург</li>
+				</ul> <!-- breadcrambs -->
+				<div class="city-banner__static-row">
+					<div class="city-banner__weather sm-hide wow fadeInDown20">
+						<img src="images/weather.png" alt="">
+					</div>
+					<h1 class="wow fadeInRight20">Куда пойти в Санкт-Петербурге?</h1>
+				</div>
+			</div>
+		</div> <!-- city-banner__static -->
+		<div class="owl-carousel owl-theme owl-theme-extour owl-theme-extour--dots-container owl-theme-extour--dots-left city-banner__slider">
+
+			<div class="city-banner__slide">
+				<div class="city-banner__slide-image">
+					<img src="images/slide1.jpg" alt="">
+				</div>
+				<div class="city-banner__slide-content">
+					<div class="container">
+						<h3>177 экскурсий<br>53 гида ждут Вас в этом городе</h3>	
+					</div>
+				</div>
+			</div> <!-- city-banner__slide -->
+
+			<div class="city-banner__slide">
+				<div class="city-banner__slide-image">
+					<img src="images/slide1.jpg" alt="">
+				</div>
+				<div class="city-banner__slide-content">
+					<div class="container">
+						<h3>177 экскурсий<br>53 гида ждут Вас в этом городе</h3>	
+					</div>
+				</div>
+			</div> <!-- city-banner__slide -->
+
+			<div class="city-banner__slide">
+				<div class="city-banner__slide-image">
+					<img src="images/slide1.jpg" alt="">
+				</div>
+				<div class="city-banner__slide-content">
+					<div class="container">
+						<h3>177 экскурсий<br>53 гида ждут Вас в этом городе</h3>	
+					</div>
+				</div>
+			</div> <!-- city-banner__slide -->
+
+		</div> <!-- city-slider -->
+	</div> <!-- city-banner -->
+
+	<div class="filter-header sm-show">
+		<div class="container">
+			<h3>Подобрать экскурсию</h3>
+		</div>
+	</div>	
+
+	<form action="#" class="filter form sm-hide wow fadeInUp20">
+
+		<div class="container">
+			<div class="filter__controls">
+				<div class="filter__inputs-row">
+					<div>
+						<p>Кол-во человек</p>
+						<div class="filter__person-count-row">
+							<img src="images/person-count.png" alt="">
+							<input type="text" class="filter__person-count" value="2">
+							<div class="filter__person-count-controls">
+								<div class="filter__person-count-plus"></div>
+								<div class="filter__person-count-minus"></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<p>Диапазон дат</p>
+						<div class="filter__period">
+							<input type="date" id="period-begin" value="2018-01-21">
+							<input type="date" id="period-end" value="2018-01-25">
+							<img src="images/period.png" alt="">
+						</div>
+					</div>
+					<div class="filter__tour-type">
+						<p>Типы экскурсий</p>
+						<select name="tour-type" id="tour-type">
+							<option value="Все" selected>Все</option>
+							<option value="Не все">Не все</option>
+						</select>
+					</div>
+					<div class="filter__button-box">
+						<button class="button"><span>Подобрать</span></button>
+					</div>
+				</div> <!-- filter__inputs -->
+
+				<div class="filter__price-slider">
+					<div class="filter__price-slider-info">
+						<p>Цена с 1 чел.</p>
+						<div class="filter__price-slider-inputs">
+							<span>От</span>
+							<input type="text" id="price-begin" name="price-begin">
+							<span>До</span>
+							<input type="text" id="price-end" name="price-end">
+						</div>
+					</div> <!-- filter__price-slider-info -->
+					<div class="filter__price-slider-control">
+						<div id="price-slider"></div>
+					</div>
+				</div> <!-- filter__price-slider -->
+
+
+				<div class="filter__checkboxes">
+					<input type="checkbox" id="check1"><label for="check1">Пешие</label>
+					<input type="checkbox" id="check2"><label for="check2">Автобусные</label>
+					<input type="checkbox" id="check3"><label for="check3">Индивид. траспорт</label>
+					<input type="checkbox" id="check4" checked><label for="check4">Водные</label>
+					<input type="checkbox" id="check5"><label for="check5">Конные</label>
+				</div> <!-- filter__checkboxes -->
+			</div> <!-- filter__controls -->
+		</div> <!-- container -->
+	</form> <!-- filter -->
+
+	<div class="tour-type">
+		<div class="container">
+			<h2>Выберите тип экскурсии в Санкт-Петербурге</h2>
+
+			<div class="row">
+
+				<a href="#" class="tour-type__item col col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0s">
+					<img src="images/tour1.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.4s">
+						<h4>Обзорные экскурсии</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.2s">
+					<img src="images/tour2.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.6s">
+						<h4>Исторические места</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.4s">
+					<img src="images/tour3.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.8s">
+						<h4>Музеи и искусство</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0s">
+					<img src="images/tour4.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.4s">
+						<h4>Загородные поездки</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.2s">
+					<img src="images/tour5.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.6s">
+						<h4>Экстремальные</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.4s">
+					<img src="images/tour6.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.8s">
+						<h4>Романтические</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-12 col-md-6 wow fadeIn" data-wow-delay="0s">
+					<img src="images/tour7.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.4s">
+						<h4>Исторические места</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0s">
+					<img src="images/tour4.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.4s">
+						<h4>Загородные поездки</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.2s">
+					<img src="images/tour8.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.6s">
+						<h4>Экстремальные</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+			</div> <!-- row -->
+		</div> <!-- container -->
+	</div> <!-- tour-type -->
+
+	<div class="tour-type-more">
+		<div class="container">
+			<div class="tour-type-more__row">
+				<p>А также:</p>
+				<ul>
+					<li><a href="#"><span>Для детей</span></a></li>
+					<li><a href="#"><span>Для взрослых</span></a></li>
+					<li><a href="#"><span>Сезонные</span></a></li>
+					<li><a href="#"><span>Фотосессии</span></a></li>
+					<li><a href="#"><span>Квесты</span></a></li>
+				</ul>
+			</div> <!-- tour-type-more__row -->
+		</div> <!-- container -->
+	</div> <!-- tour-type-more -->
+
+	<div class="popular">
+		<div class="container">
+			<h2>Самые популярные экскурсии в Санкт-Петербурге</h2>
+			<div class="popular__items">
+
+				<div class="popular__item wow fadeInUp20">
+					<div class="popular__cover">
+						<div class="popular__img">
+							<img src="images/pop-tour1.jpg" alt="">
+							<p class="lg-show">Ближайшая сегодня в 14:00</p>
+						</div>
+					</div> <!-- popular__cover -->
+					<div class="popular__info">
+						<div class="popular__title">
+							<h3 class="sm-hide">Классический Петербург</h3>
+							<div class="popular__rating-box lg-show">
+								<div class="popular__rating">
+									<p>250 отзывов</p>
+									<img src="images/star-gold.png" alt="">
+									<img src="images/star-gold.png" alt="">
+									<img src="images/star-gold.png" alt="">
+									<img src="images/star-semigold.png" alt="">
+									<img src="images/star.png" alt="">
+									<p>12+</p>
+								</div> <!-- popular__rating -->
+							</div> <!-- popular__rating-box -->
+						</div> <!-- popular__title -->
+						<p class="popular__text lg-show">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						</p> <!-- popular__text -->
+						<p class="popular__prop">
+							<span class="popular__duration">
+								Длительность: <strong>1,5 часа</strong>
+							</span>
+							<span class="popular__count">
+								Кол-во человек: <strong>До 5</strong>
+							</span>
+						</p> <!-- popular__prop -->
+						<div class="popular__guide">
+							<div class="popular__guide-img">
+								<img src="images/guide1-45x45.jpg" alt="">
+							</div>
+							<p class="popular__guide-text lg-hide">Степанова Е., 27</p>
+							<p class="popular__guide-text lg-show">Степанова  Елизавета</p>
+							<p class="popular__guide-text lg-show">27 лет</p>
+							<p class="popular__guide-text lg-show">Рейтинг: 4,7</p>
+							<p class="popular__guide-online">on-line</p>
+							<!-- <p class="popular__guide-offline">offline</p> -->
+							<a href="#" class="popular__guide-post lg-show">Написать гиду</a>
+						</div> <!-- popular__guide -->
+						<p class="popular__booked">Забронировано за последние 24 часа: 4 раза</p>
+						<div class="popular__footer">
+							<p class="popular__price">Цена: от <span>1740 руб.</span></p>
+							<a href="#" class="popular__more"><span class="sm-hide">Подробнее</span></a>
+						</div> <!-- popular__footer -->
+					</div> <!-- popular__info -->
+				</div> <!-- popular__item -->
+
+				<div class="popular__item wow fadeInUp20">
+					<div class="popular__cover">
+						<div class="popular__img">
+							<img src="images/pop-tour2.jpg" alt="">
+							<p class="lg-show">Ближайшая сегодня в 14:00</p>
+						</div>
+					</div> <!-- popular__cover -->
+					<div class="popular__info">
+						<div class="popular__title">
+							<h3 class="sm-hide">
+								Историческое наследие северной столицы
+								название в 2-е строка
+							</h3>
+							<div class="popular__rating-box lg-show">
+								<div class="popular__rating">
+									<p>250 отзывов</p>
+									<img src="images/star-gold.png" alt="">
+									<img src="images/star-gold.png" alt="">
+									<img src="images/star-gold.png" alt="">
+									<img src="images/star-semigold.png" alt="">
+									<img src="images/star.png" alt="">
+									<p>12+</p>
+								</div> <!-- popular__rating -->
+							</div> <!-- popular__rating-box -->
+						</div> <!-- popular__title -->
+						<p class="popular__text lg-show">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						</p> <!-- popular__text -->
+						<p class="popular__prop">
+							<span class="popular__duration">
+								Длительность: <strong>1,5 часа</strong>
+							</span>
+							<span class="popular__count">
+								Кол-во человек: <strong>До 5</strong>
+							</span>
+						</p> <!-- popular__prop -->
+						<div class="popular__guide">
+							<div class="popular__guide-img">
+								<img src="images/guide1-45x45.jpg" alt="">
+							</div>
+							<p class="popular__guide-text lg-hide">Степанова Е., 27</p>
+							<p class="popular__guide-text lg-show">Степанова  Елизавета</p>
+							<p class="popular__guide-text lg-show">27 лет</p>
+							<p class="popular__guide-text lg-show">Рейтинг: 4,7</p>
+							<p class="popular__guide-offline">off-line</p>
+							<!-- <p class="popular__guide-offline">offline</p> -->
+							<a href="#" class="popular__guide-post lg-show">Написать гиду</a>
+						</div> <!-- popular__guide -->
+						<p class="popular__booked">Забронировано за последние 24 часа: 4 раза</p>
+						<div class="popular__footer">
+							<p class="popular__price">Цена: от <span>2930 руб.</span></p>
+							<a href="#" class="popular__more"><span class="sm-hide">Подробнее</span></a>
+						</div> <!-- popular__footer -->
+					</div> <!-- popular__info -->
+				</div> <!-- popular__item -->
+
+				<div class="popular__item wow fadeInUp20">
+					<div class="popular__cover">
+						<div class="popular__img">
+							<img src="images/pop-tour3.jpg" alt="">
+							<p class="lg-show">Ближайшая сегодня в 14:00</p>
+						</div>
+					</div> <!-- popular__cover -->
+					<div class="popular__info">
+						<div class="popular__title">
+							<h3 class="sm-hide">Ночная прогулка по Питербургу</h3>
+							<div class="popular__rating-box lg-show">
+								<div class="popular__rating">
+									<p>250 отзывов</p>
+									<img src="images/star-gold.png" alt="">
+									<img src="images/star-gold.png" alt="">
+									<img src="images/star-gold.png" alt="">
+									<img src="images/star-semigold.png" alt="">
+									<img src="images/star.png" alt="">
+									<p>12+</p>
+								</div> <!-- popular__rating -->
+							</div> <!-- popular__rating-box -->
+						</div> <!-- popular__title -->
+						<p class="popular__text lg-show">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						</p> <!-- popular__text -->
+						<p class="popular__prop">
+							<span class="popular__duration">
+								Длительность: <strong>1,5 часа</strong>
+							</span>
+							<span class="popular__count">
+								Кол-во человек: <strong>До 5</strong>
+							</span>
+						</p> <!-- popular__prop -->
+						<div class="popular__guide">
+							<div class="popular__guide-img">
+								<img src="images/guide1-45x45.jpg" alt="">
+							</div>
+							<p class="popular__guide-text lg-hide">Степанова Е., 27</p>
+							<p class="popular__guide-text lg-show">Степанова  Елизавета</p>
+							<p class="popular__guide-text lg-show">27 лет</p>
+							<p class="popular__guide-text lg-show">Рейтинг: 4,7</p>
+							<p class="popular__guide-online">on-line</p>
+							<!-- <p class="popular__guide-offline">offline</p> -->
+							<a href="#" class="popular__guide-post lg-show">Написать гиду</a>
+						</div> <!-- popular__guide -->
+						<p class="popular__booked">Забронировано за последние 24 часа: 4 раза</p>
+						<div class="popular__footer">
+							<p class="popular__price">Цена: от <span>1740 руб.</span></p>
+							<a href="#" class="popular__more"><span class="sm-hide">Подробнее</span></a>
+						</div> <!-- popular__footer -->
+					</div> <!-- popular__info -->
+				</div> <!-- popular__item -->								
+
+			</div> <!-- popular__items -->
+			<div class="popular__button-box">
+				<a href="#" class="button"><span>Смотреть все</span></a>
+			</div>
+
+		</div> <!-- container -->
+	</div> <!-- popular -->
+
+	<div class="guides">
+		<div class="container">
+			<h2>Топ гидов</h2>
+			<p class="subtitle">Лучшие гиды этого города</p>
+			<a href="#" class="guides__all lg-show">Все гиды</a>
+			<div class="guides__slider-box">
+				<div class="guides__slider owl-carousel owl-theme owl-theme-extour">
+
+					<div class="guides__item wow fadeIn" data-wow-delay="0s">
+						<div class="guides__item-img">
+							<div class="guides__item-img-box">
+								<img src="images/guide1-120x120.jpg" alt="">
+							</div> <!-- guides__item-img-box -->
+						</div> <!-- guides__item-img -->
+						<div class="guides__item-info">
+							<p class="guides__item-name-full">Степанова<br>Елизавета, 27</p>
+							<p class="guides__item-name-short">Елизавета</p>
+							<p class="guides__item-rating">Рейтинг: 4,7</p>
+							<div class="guides__item-stars">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-semigold-guide.png" alt="">
+								<img src="images/star-guide.png" alt="">
+							</div>
+							<a href="#" class="button"><span>Подробнее</span></a>
+						</div> <!-- guides__item-info -->
+					</div> <!-- guides__item -->
+
+					<div class="guides__item wow fadeIn" data-wow-delay="0.2s">
+						<div class="guides__item-img">
+							<div class="guides__item-img-box">
+								<img src="images/guide1-120x120.jpg" alt="">
+							</div> <!-- guides__item-img-box -->
+						</div> <!-- guides__item-img -->
+						<div class="guides__item-info">
+							<p class="guides__item-name-full">Степанова<br>Елизавета, 27</p>
+							<p class="guides__item-name-short">Елизавета</p>
+							<p class="guides__item-rating">Рейтинг: 4,7</p>
+							<div class="guides__item-stars">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-semigold-guide.png" alt="">
+								<img src="images/star-guide.png" alt="">
+							</div>
+							<a href="#" class="button"><span>Подробнее</span></a>
+						</div> <!-- guides__item-info -->
+					</div> <!-- guides__item -->
+
+					<div class="guides__item wow fadeIn" data-wow-delay="0.4s">
+						<div class="guides__item-img">
+							<div class="guides__item-img-box">
+								<img src="images/guide1-120x120.jpg" alt="">
+							</div> <!-- guides__item-img-box -->
+						</div> <!-- guides__item-img -->
+						<div class="guides__item-info">
+							<p class="guides__item-name-full">Степанова<br>Елизавета, 27</p>
+							<p class="guides__item-name-short">Елизавета</p>
+							<p class="guides__item-rating">Рейтинг: 4,7</p>
+							<div class="guides__item-stars">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-semigold-guide.png" alt="">
+								<img src="images/star-guide.png" alt="">
+							</div>
+							<a href="#" class="button"><span>Подробнее</span></a>
+						</div> <!-- guides__item-info -->
+					</div> <!-- guides__item -->
+
+					<div class="guides__item wow fadeIn" data-wow-delay="0.6s">
+						<div class="guides__item-img">
+							<div class="guides__item-img-box">
+								<img src="images/guide1-120x120.jpg" alt="">
+							</div> <!-- guides__item-img-box -->
+						</div> <!-- guides__item-img -->
+						<div class="guides__item-info">
+							<p class="guides__item-name-full">Степанова<br>Елизавета, 27</p>
+							<p class="guides__item-name-short">Елизавета</p>
+							<p class="guides__item-rating">Рейтинг: 4,7</p>
+							<div class="guides__item-stars">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-semigold-guide.png" alt="">
+								<img src="images/star-guide.png" alt="">
+							</div>
+							<a href="#" class="button"><span>Подробнее</span></a>
+						</div> <!-- guides__item-info -->
+					</div> <!-- guides__item -->
+
+					<div class="guides__item wow fadeIn" data-wow-delay="0.8s">
+						<div class="guides__item-img">
+							<div class="guides__item-img-box">
+								<img src="images/guide1-120x120.jpg" alt="">
+							</div> <!-- guides__item-img-box -->
+						</div> <!-- guides__item-img -->
+						<div class="guides__item-info">
+							<p class="guides__item-name-full">Степанова<br>Елизавета, 27</p>
+							<p class="guides__item-name-short">Елизавета</p>
+							<p class="guides__item-rating">Рейтинг: 4,7</p>
+							<div class="guides__item-stars">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-semigold-guide.png" alt="">
+								<img src="images/star-guide.png" alt="">
+							</div>
+							<a href="#" class="button"><span>Подробнее</span></a>
+						</div> <!-- guides__item-info -->
+					</div> <!-- guides__item -->
+
+					<div class="guides__item wow fadeIn" data-wow-delay="1s">
+						<div class="guides__item-img">
+							<div class="guides__item-img-box">
+								<img src="images/guide1-120x120.jpg" alt="">
+							</div> <!-- guides__item-img-box -->
+						</div> <!-- guides__item-img -->
+						<div class="guides__item-info">
+							<p class="guides__item-name-full">Степанова<br>Елизавета, 27</p>
+							<p class="guides__item-name-short">Елизавета</p>
+							<p class="guides__item-rating">Рейтинг: 4,8</p>
+							<div class="guides__item-stars">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-gold-guide.png" alt="">
+								<img src="images/star-semigold-guide.png" alt="">
+								<img src="images/star-guide.png" alt="">
+							</div>
+							<a href="#" class="button"><span>Подробнее</span></a>
+						</div> <!-- guides__item-info -->
+					</div> <!-- guides__item -->
+
+				</div> <!-- guides__slider -->
+			</div> <!-- guides__slider-box -->
+		</div> <!-- container -->
+	</div> <!-- guides -->
+
+	<div class="testimonials">
+		<div class="container">
+			<h2>550 отзывов на экскурсии в Санкт-Петербурге</h2>			
+			<div class="testimonials__slider-box">
+				<div class="testimonials__slider owl-carousel owl-theme owl-theme-extour owl-theme-extour--dots-grey owl-theme-extour--dots-left">
+					
+					<div class="testimonials__slide-box">
+						<div class="testimonials__slide">
+							<div class="testimonials__rating">4</div>
+							<div class="testimonials__slide-row">
+								<div class="testimonials__slide-col-img">
+									<img src="images/testimonial-user1.jpg" alt="">
+								</div> <!-- testimonials__slide-col-img -->
+								<div class="testimonials__slide-col-info">
+									<h3>Отзыв об экскурсии Ночная прогулка по ночному Петербургу</h3>
+									<p class="testimonials__user-info">Иванова София<br>г. Санкт- Петербург</p>
+									<p class="testimonials__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum... 
+									</p> <!-- testimonials__text -->
+								</div> <!-- testimonials__slide-col-info -->
+							</div> <!-- testimonials__slide-row -->
+						</div> <!-- testimonials__slide -->
+					</div> <!-- testimonials__slide-box -->
+
+					<div class="testimonials__slide-box">
+						<div class="testimonials__slide">
+							<div class="testimonials__rating">4</div>
+							<div class="testimonials__slide-row">
+								<div class="testimonials__slide-col-img">
+									<img src="images/testimonial-user1.jpg" alt="">
+								</div> <!-- testimonials__slide-col-img -->
+								<div class="testimonials__slide-col-info">
+									<h3>Отзыв об экскурсии Ночная прогулка по ночному Петербургу</h3>
+									<p class="testimonials__user-info">Иванова София<br>г. Санкт- Петербург</p>
+									<p class="testimonials__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum... 
+									</p> <!-- testimonials__text -->
+								</div> <!-- testimonials__slide-col-info -->
+							</div> <!-- testimonials__slide-row -->
+						</div> <!-- testimonials__slide -->
+					</div> <!-- testimonials__slide-box -->
+
+					<div class="testimonials__slide-box">
+						<div class="testimonials__slide">
+							<div class="testimonials__rating">4</div>
+							<div class="testimonials__slide-row">
+								<div class="testimonials__slide-col-img">
+									<img src="images/testimonial-user1.jpg" alt="">
+								</div> <!-- testimonials__slide-col-img -->
+								<div class="testimonials__slide-col-info">
+									<h3>Отзыв об экскурсии Ночная прогулка по ночному Петербургу</h3>
+									<p class="testimonials__user-info">Иванова София<br>г. Санкт- Петербург</p>
+									<p class="testimonials__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum... 
+									</p> <!-- testimonials__text -->
+								</div> <!-- testimonials__slide-col-info -->
+							</div> <!-- testimonials__slide-row -->
+						</div> <!-- testimonials__slide -->
+					</div> <!-- testimonials__slide-box -->
+					
+				</div> <!-- testimonials__slider -->
+			</div> <!-- testimonials__slider-box -->
+			<a class="testimonials__more sm-hide" href="#">Посмотреть все</a>
+		</div> <!-- container -->
+	</div> <!-- testimonials -->
+
+
+	<div class="landmarks">
+		<div class="container">
+			<h2>Главные достопримечательности Санкт-Петербурга</h2>
+			<div class="row">
+
+				<div class="landmark landmark--type1 col col-lg-3 col-md-5 wow fadeIn" data-wow-delay="0.8s">
+					<div class="landmark__img">
+						<img src="images/landmark1.png" alt="">
+					</div>
+					<div class="landmark__text wow fadeInUp" data-wow-delay="0.8s">
+						<h3>Дворцовый мост</h3>
+						<p>
+							Разводной мост над рекой Нева, символ Санкт-Петербурга. Конструкция соединяет Васильевский остров с...
+						</p>
+						<a href="#">Подробнее</a>
+					</div> <!-- landmark__text -->
+				</div> <!-- landmark -->
+
+				<div class="landmark landmark--type2 col col-lg-5 col-md-7 wow fadeIn" data-wow-delay="0.4s">
+					<div class="landmark__img">
+						<img src="images/landmark2.jpg" alt="">
+					</div>
+					<div class="landmark__text wow fadeInUp" data-wow-delay="0.4s">
+						<h3>Петергоф</h3>
+						<p>
+							Бывшая императорская загородная резиденция, которую основал Петр Великий в начале XVIII столетия. Этот грандиозный дворцово-парковый ансамбль называют «русским Версалем». За три столетия существования облик Петергофа достаточно сильно изменился, а после Войны...
+						</p>	
+						<a href="#">Подробнее</a>
+					</div> <!-- landmark__text -->
+					
+				</div> <!-- landmark -->
+
+				<div class="landmark landmark--type3 col col-lg-4 lg-show wow fadeIn">
+					<div class="landmark__img">
+						<img src="images/landmark3.jpg" alt="">
+					</div>
+					<div class="landmark__text wow fadeInUp">
+						<h3>Исаакиевский собор</h3>
+						<p>
+							Величественный собор, украшение города и крупнейший православный храм в Санкт-Петербурге. Стройка велась ...
+						</p>	
+						<a href="#">Подробнее</a>
+					</div> <!-- landmark__text -->
+					
+				</div> <!-- landmark -->
+
+				<div class="landmark landmark--type4 col col-lg-8 col-md-7 wow fadeIn" data-wow-delay="0.4s">
+					<div class="landmark__img">
+						<img src="images/landmark4.jpg" alt="">
+					</div>					
+					<div class="landmark__text wow fadeInUp" data-wow-delay="0.4s">
+						<h3>Львы Санкт-Петербурга</h3>
+						<p class="lg-show">
+							Многочисленные изваяния львов, которых по городу насчитывается более 1000 штук. Они созданы из разных материалов и привезены из различных государств. Не только статуи, но и львиные барельефы украшают городские фасады. Львы начали появляться на улицах и площадях с XVIII века. Звери символизируют стражей, которые призваны охранять спокойствие и неприкосновенность Санкт-Петербурга....
+						</p>	
+						<p class="md-show">
+							Многочисленные изваяния львов, которых по городу насчитывается более 1000 штук. Они созданы из разных материалов и привезены из различных государств. Не только статуи, но и львиные барельефы украшают городские фасады. Львы начали появляться на ....
+						</p>
+						<p class="sm-show">
+							Многочисленные изваяния львов, которых по городу насчитывается более 1000 штук. Они созданы из разных материалов и привезены...
+						</p>
+						<a href="#">Подробнее</a>
+					</div> <!-- landmark__text -->
+				</div> <!-- landmark -->
+
+				<div class="landmark landmark--type5 col col-lg-4 col-md-5 sm-hide wow fadeIn">
+					<div class="landmark__img">
+						<img src="images/landmark5.jpg" alt="" class="lg-show">
+						<img src="images/landmark5-md.png" alt="" class="md-show">
+					</div>
+					<div class="landmark__text wow fadeInUp">
+						<h3>Эрмитаж</h3>
+						<p>
+							Крупнейший в России музей, который наряду с испанским Прадо, парижским Лувром и музеями Ватикана входит в список самых выдающихся и ценных собраний произведений искусства в мире. Экспозиции Эрмитажа занимают 6 зданий, здесь хранится порядка 3 млн. экспонатов...
+						</p>
+						<a href="#">Подробнее</a>
+					</div> <!-- landmark__text -->
+				</div> <!-- landmark -->
+
+				<div class="landmark landmark--type3 landmark--ha col col-lg-12 sm-hide wow fadeIn">
+					<div class="landmark__img">
+						<img src="images/landmark6.jpg" alt="">
+					</div>
+					<div class="landmark__text wow fadeInUp">
+						<h3>Петропавловская крепость</h3>
+						<p>
+							Защитное сооружение и исторический центр Санкт-Петербурга начала XVIII века, с которого началось строительство города. Крепость никогда не использовалось по назначению (она служила тюрьмой). Архитектурный ансамбль состоит из крепостных стен, бастионов, парадных ворот и административных построек...
+						</p>	
+						<a href="#">Подробнее</a>
+					</div> <!-- landmark__text -->
+				</div> <!-- landmark -->
+
+			</div> <!-- row -->
+
+			<a href="#" class="landmarks__more">Посмотреть все</a>
+		</div> <!-- container -->
+	</div> <!-- landmarks -->
+
+	<div class="partner">
+		<div class="container">
+			<div class="partner__row">
+				<img src="images/partners.png" alt="">
+				<p>Мы будем рады <br class="sm-show"> сотрудничать с Вами</p>
+				<a href="#" class="button violet"><span>Стать партнером</span></a>
+			</div> <!-- partner__row -->
+		</div> <!-- container -->
+	</div> <!-- partner -->
+
+	<footer class="footer">
+		<div class="container">	
+			<div class="footer__row row">
+
+				<div class="col col-lg-3 col-md-4">
+					<h3>Информация</h3>		
+					<ul class="temp">
+						<li><a href="#">О проекте</a></li>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Партнерская программа</a></li>
+						<li><a href="#">Все гиды</a></li>
+						<li><a href="#">Все города</a></li>
+						<li><a href="#">Добавить экскурсию</a></li>
+					</ul>
+				</div> <!-- col -->
+
+				<div class="col col-lg-3 col-md-4">
+					<h3>Помощь</h3>		
+					<ul>
+						<li><a href="#">Часто задаваемые вопросы</a></li>
+						<li><a href="#">Политика возврата</a></li>
+						<li><a href="#">Договор оферты</a></li>
+						<li><a href="#">Политика конфиденциальности</a></li>
+						<li><a href="#">Статьи</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+					</ul>
+				</div> <!-- col -->
+
+				<div class="col col-lg-3 col-md-4 sm-hide">
+					<h3>Топы экскурсий</h3>		
+						<ul>
+							<li><a href="#">Все категории экскурсий</a></li>
+							<li><a href="#">Все экстримальные экскурсии</a></li>
+							<li><a href="#">Все обзорные экскурсии</a></li>
+							<li><a href="#">Все индивидуальные экскурсии</a></li>
+							<li><a href="#">Все пешие экскурсии</a></li>
+							<li><a href="#">Все автобусные экскурсии</a></li>
+						</ul>
+				</div> <!-- col -->
+
+				<div class="footer__social col col-lg-3">
+					<h3>Подписка</h3>
+					<div>
+						<a href="#" class="footer__social-fb">Facebook</a>
+						<a href="#" class="footer__social-inst">Instagram</a>
+						<a href="#" class="footer__social-tw">Twitter</a>
+						<a href="#" class="footer__social-vk">ВКонтакте</a>
+						<a href="#" class="footer__social-ok">Одноклассники</a>
+					</div>	<!-- footer__social -->
+				</div> <!-- col -->
+
+			</div> <!-- footer__row -->
+		</div> <!-- container -->
+
+		<hr>
+
+		<div class="container">
+			<div class="footer__sub">
+				<div class="footer__sub-row">
+					<div class="footer__payment">
+						<h3>Мы принимаем:</h3>
+						<img src="images/payment-mir.png" class="sm-hide" alt="">
+						<img src="images/payment-visa.png" class="sm-hide" alt="">
+						<img src="images/payment-mastercard.png" class="sm-hide" alt="">
+						<img src="images/payment-yandex-money.png" class="sm-hide" alt="">
+						<img src="images/payment-mir-sm.png" class="sm-show" alt="">
+						<img src="images/payment-visa-sm.png" class="sm-show" alt="">
+						<img src="images/payment-mastercard-sm.png" class="sm-show" alt="">
+						<img src="images/payment-yandex-money-sm.png" class="sm-show" alt="">
+					</div> <!-- footer__payment -->
+					<div class="footer__copy">© 2017 Команда Extour</div>
+				</div> <!-- footer__sub-row -->
+			</div> <!-- footer__sub -->
+		</div> <!-- container -->
+	</footer>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

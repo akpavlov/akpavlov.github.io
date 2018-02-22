@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Тест</title>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body class="section-grey">
+
+	<header class="header">
+		<div class="container">
+			<div class="header__row">
+				<div class="header__logo">
+					<img src="images/logo.png" alt="">
+					<p class="hide-500">Центр развития и роста</p>
+				</div> <!-- header__logo -->
+				<div class="header__contacts">
+					<div class="header__vk hide-640">
+						<p>Вступайте</p>
+						<img src="images/vk.png" alt="">
+					</div>
+					<div class="header__tel">
+						<p>+7 (3852) 500-500</p>
+						<a href="#" class="button">Перезвоните мне</a>
+					</div> <!-- header__tel -->
+				</div> <!-- header__contacts -->
+			</div> <!-- header__row -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<div class="step">
+		<div class="container">	
+			<div class="step__wrapper">	
+				<div class="step__progress">
+					<div class="step__progress-bar">	
+						<div class="step__progress-value" style="width: 20%"></div>
+					</div> <!-- step__progress-bar -->
+					<p class="step__progress-label">20 %</p>
+				</div> <!-- step__progress -->
+				<form action="" class="step__question">
+					<h2>Ваш среднемесячный доход за последний год</h2>
+					<div class="step__answers">
+						<input type="radio" name="question" id="radio-1" value="1">
+						<label for="radio-1">0</label>
+						<br>
+						<input type="radio" name="question" id="radio-2" value="2">
+						<label for="radio-2">до 50 000 руб</label>
+						<br>
+						<input type="radio" name="question" id="radio-3" value="3">
+						<label for="radio-3">до 100 000 руб</label>
+						<br>
+						<input type="radio" name="question" id="radio-4" value="4">
+						<label for="radio-4">до 300 000 руб</label>
+						<br>
+						<input type="radio" name="question" id="radio-5" value="5">
+						<label for="radio-5">до 1 000 000 руб</label>
+					</div> <!-- step__answers -->
+					<button class="button">Следующий вопрос</button>
+				</form> <!-- step__question -->
+			</div> <!-- step__wrapper -->
+		</div> <!-- container -->
+	</div> <!-- step -->
+
+		
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
