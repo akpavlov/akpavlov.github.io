@@ -29,7 +29,7 @@ $(function() {
 			left: 255
 		});
 		$('body').addClass('no-scroll');
-		if ($('.header').hasClass('sm-fixed')) {
+		if ($('.header').hasClass('header--sm-fixed')) {
 			$('.header').css('left', '255px');
 		}
 		$('.mobile-menu-button--sm').toggleClass('mobile-menu-button--close');
@@ -141,6 +141,18 @@ $(function() {
 		autoWidth: true
 	});
 
+	// Слайдер вы здесь еще не были
+
+	$(".here__slider").owlCarousel({
+
+		loop: true,
+		margin: 30,
+		nav: true,
+		dots: false,
+		autoWidth: true,
+		navText: ['', '']
+	});
+
 	// Слайдер отзывы
 	
 	$(".testimonials__slider").owlCarousel({
@@ -159,22 +171,25 @@ $(function() {
 	});
 	wow.init();
 
-	// Прокрутка
+	//////////////////////// Прокрутка ////////////////////////
 
 	var scrollTop = $(window).scrollTop();
 	$(window).scroll(function() {
+
+		// Шапка для мобильной версии
+
 		if ($(window).scrollTop() > $('.header').outerHeight()) {
-			$('.header').addClass('sm-fixed');
+			$('.header').addClass('header--sm-fixed');
 			if (mobileMenuOpened()) {
 				$('.header').css('left', '255px');	
 			}
 		} else {
-			$('.header').removeClass('sm-fixed');
+			$('.header').removeClass('header--sm-fixed');
 			$('.header').css('left', '0');
 		}
 		if ($(window).scrollTop() > scrollTop) {
 			if (!mobileMenuOpened()) {	
-				if ($('.header').hasClass('sm-fixed')) {
+				if ($('.header').hasClass('header--sm-fixed')) {
 					$('.header').addClass('sm-hide');
 				}
 			}
@@ -182,12 +197,134 @@ $(function() {
 			$('.header').removeClass('sm-hide');
 		}
 		scrollTop = $(window).scrollTop();
+
+		setHeaderTransparent();
 	});
+
+	function setHeaderTransparent() {
+		if (($(window).scrollTop() > $('.city-banner').outerHeight()) || 
+			($('.submenu.show').length > 0)) {
+			$('.header--transparent').addClass('header--not-sm-fixed');
+			$('.header--transparent .header__menu-md-box').removeClass('header__menu-md-box--bg');
+		} else {
+			$('.header--transparent').removeClass('header--not-sm-fixed');
+			$('.header--transparent .header__menu-md-box').addClass('header__menu-md-box--bg');
+		}
+	}
+
+	setHeaderTransparent();
 
 	function mobileMenuOpened()
 	{
 		return ($('.mobile-menu-button--sm').hasClass('mobile-menu-button--close'));
 	}
+
+	function isMobile() {
+		return ($(window).width() < 760);
+	}
+
+	////////////////////// submenu ///////////////////////
+
+	$('.submenu-open').click(function() {
+		if (!isMobile()) {
+			var submenuClass = $(this).data('submenu');
+			submenuToggle('.' + submenuClass);
+			return false;
+		}
+	});
+
+	function submenuToggle(submenuSelector) {
+		var isShow = $(submenuSelector).hasClass('show');
+		$('.submenu.show').removeClass('show');
+		if (!isShow) {
+			$(submenuSelector).addClass('show');
+			$(submenuSelector).css('top', $('.header').outerHeight());
+		}
+	}
+
+	// submenu--cities
+
+	$('.submenu--cities .submenu__close').click(function() {
+		submenuToggle('.submenu--cities');
+	});
+
+	// submenu--more
+
+	$('.submenu--more .submenu__close').click(function() {
+		submenuToggle('.submenu--more');
+	});
+
+	$('.submenu--more>div>ul>li>a').click(function(event) {
+		if (event.target != event.currentTarget) {
+			exit;
+		}
+		var isShow = !($(this).parent().find('ul').hasClass('show'));
+		$('.submenu--more>div>ul>li>ul.show').removeClass('show');
+		if (isShow) {
+			$(this).parent().find('ul').addClass('show');			
+		}
+
+		// $(this).parent().find('ul').toggleClass('show');
+		return false;
+	});
+
+	///////////////////// end of submenu //////////////////////
+
+	// datetimepicker
+
+	$('#dates').datepicker({
+		range: true,
+		multipleDatesSeparator: ' по '
+	});
+
+	// Расширенный поиск
+
+	$('.search__filter-button').click(function() {
+		$('.search-filter').toggleClass('visible');
+	});
+
+	// Открытие модального окна
+
+	function showModal(selector) {
+		$(selector).addClass('visible');
+		$('.overlay').addClass('visible');
+	}
+
+	// Закрытие всех модальных окон
+
+	function closeModal() {
+		$('.modal.visible').removeClass('visible');
+		$('.overlay.visible').removeClass('visible');
+	}
+
+	// Кнопка закрытия модального окна
+
+	$('.modal__close-button').click(function() {
+		closeModal();
+	});
+
+	// Закрытие модального окна по клику вне модального окна
+
+	$('.overlay').click(function(event) {
+		if (event.target == event.currentTarget) {
+			closeModal();
+			return false;
+		}
+	});
+
+	// Вход
+
+	$('.header__login').click(function() {
+		showModal('.login');
+		return false;
+	});
+
+	// Стать партнером
+
+	$('#to-partner').click(function() {
+		showModal('.topartner');
+		return false;
+	})
 
 });
 

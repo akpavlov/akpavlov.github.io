@@ -13,6 +13,9 @@
 .sm-show {
   display: none;
 }
+.show {
+  display: block!important;
+}
 @media screen and (min-width: 1220px) {
   .container,
   .owl-theme-extour--dots-container .owl-nav.disabled + .owl-dots {
@@ -42,8 +45,27 @@
   .col-lg-12 {
     width: 100%;
   }
+  .header--not-sm-fixed {
+    position: fixed;
+  }
   .city-banner__slide-image {
     height: 713px;
+  }
+  .city-banner--tours .city-banner__slide-image {
+    height: 941px;
+  }
+  .city-banner__content-box {
+    padding-top: 470px;
+  }
+  .city-banner__slide-title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .city-banner__extour-net {
+    width: 483px;
+    height: 130px;
+    background: url(../images/extour-net-lg.png) 0 0 no-repeat;
+    margin-top: 12px;
   }
   .filter__controls {
     padding-left: 270px;
@@ -59,6 +81,9 @@
   }
   .tour-type {
     padding-top: 97px;
+  }
+  .tour-type--cities {
+    padding-top: 45px;
   }
   .tour-type__item {
     margin-bottom: 50px;
@@ -130,6 +155,9 @@
   .testimonials__more {
     margin-right: 67px;
   }
+  .testimonials--tours {
+    padding-top: 130px;
+  }
   .testimonials__slider .owl-nav.disabled + .owl-dots {
     margin-left: 130px;
   }
@@ -169,6 +197,28 @@
   .landmark--type5 .landmark__text {
     padding-right: 140px;
   }
+  .submenu--cities ul {
+    column-count: 6;
+  }
+  .submenu--more > div > ul > li {
+    width: 18%;
+  }
+  .subscribe {
+    height: 619px;
+    background: url(../images/subscribe-bg-lg.jpg) 50% 0 no-repeat;
+    background-size: cover;
+  }
+  .subscribe h3 {
+    font-size: 40px;
+    line-height: 36px;
+  }
+  .subscribe__form {
+    padding-left: 670px;
+    padding-right: 101px;
+  }
+  .partner__info h4 {
+    font-size: 32px;
+  }
 }
 @media screen and (min-width: 760px) and (max-width: 1219px) {
   .container,
@@ -200,12 +250,31 @@
   .header__spacer {
     height: 72px;
   }
+  .header--not-sm-fixed {
+    position: fixed;
+  }
   .city-banner__slide-image {
     height: 531px;
+  }
+  .city-banner--tours .city-banner__slide-image {
+    height: 604px;
   }
   .city-banner__static h1 {
     font-size: 45px;
     line-height: 50px;
+  }
+  .city-banner__content-box {
+    padding-top: 374px;
+  }
+  .city-banner__slide-title {
+    font-size: 42px;
+    line-height: 42px;
+  }
+  .city-banner__extour-net {
+    width: 350px;
+    height: 100px;
+    background: url(../images/extour-net-md.png) 0 0 no-repeat;
+    margin-top: 10px;
   }
   .filter {
     padding-bottom: 63px;
@@ -312,6 +381,9 @@
   .testimonials .testimonials__slide-col-img img {
     width: 168px;
   }
+  .testimonials--tours {
+    padding-top: 60px;
+  }
   .testimonials__slider .owl-nav.disabled + .owl-dots {
     margin-left: 30px;
   }
@@ -338,14 +410,82 @@
   .landmark--ha {
     height: auto;
   }
-  .partner p {
+  .partner__row p {
     font-size: 32px;
+  }
+  .partner__info h4 {
+    font-size: 28px;
   }
   .footer li {
     font-size: 14px;
   }
   .footer .col:nth-child(2) {
     width: 34%;
+  }
+  .submenu--cities ul {
+    column-count: 4;
+  }
+  .submenu--more > div > ul > li {
+    width: 22%;
+  }
+  .search {
+    margin-top: 60px;
+  }
+  .search-filter {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .search-filter select {
+    margin-right: 16px;
+  }
+  .search-filter select:nth-child(1) {
+    width: 135px;
+  }
+  .search-filter select:nth-child(2) {
+    width: 135px;
+  }
+  .search-filter select:nth-child(3) {
+    width: 163px;
+  }
+  .search-filter button {
+    margin-top: 38px;
+  }
+  .master {
+    padding-top: 55px;
+    padding-bottom: 56px;
+    background: url(../images/master-md.png) 50% 62px no-repeat;
+  }
+  .master h2 {
+    margin-bottom: 20px;
+  }
+  .master p {
+    margin-bottom: 33px;
+  }
+  .here__slider-box {
+    margin: 0 128px;
+  }
+  .subscribe {
+    height: 553px;
+    background: url(../images/subscribe-bg-md.jpg) 50% 0 no-repeat;
+    background-size: cover;
+  }
+  .subscribe h3 {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+  .subscribe img {
+    margin-bottom: 30px;
+  }
+  .subscribe p {
+    margin-bottom: 30px;
+  }
+  .subscribe input {
+    margin-bottom: 40px;
+  }
+  .subscribe__form {
+    padding-left: 374px;
+    padding-right: 0px;
   }
 }
 @media screen and (max-width: 1219px) {
@@ -377,6 +517,25 @@
   .footer__copy {
     width: 100%;
   }
+  .advantages h4 {
+    font-size: 26px;
+  }
+  .owl-theme-extour .owl-dots .owl-dot span,
+  .owl-theme-extour .owl-dots .owl-dot:hover span {
+    margin: 5px 4px 5px 4px;
+    width: 14px;
+    height: 14px;
+  }
+  .owl-theme-extour .owl-dots .owl-dot.active span,
+  .owl-theme-extour .owl-dots .owl-dot.active:hover span {
+    width: 18px;
+    height: 18px;
+    margin: 5px 3px 3px 2px;
+  }
+  .city-banner__slider .owl-nav.disabled + .owl-dots,
+  .owl-theme-extour--banner .owl-nav.disabled + .owl-dots {
+    margin-top: -40px;
+  }
 }
 @media screen and (max-width: 759px) {
   .container,
@@ -393,7 +552,7 @@
     font-size: 30px;
     line-height: 39px;
   }
-  .header {
+  .header--normal {
     position: relative;
   }
   .header__row {
@@ -402,8 +561,14 @@
   .header__spacer {
     display: none;
   }
+  .header--sm-fixed {
+    position: fixed;
+  }
   .city-banner__slide-image {
     height: 426px;
+  }
+  .city-banner--tours .city-banner__slide-image {
+    height: 485px;
   }
   .city-banner__static h1 {
     font-size: 45px;
@@ -413,6 +578,19 @@
     font-size: 16px;
     line-height: 20px;
     bottom: 68px;
+  }
+  .city-banner__content-box {
+    padding-top: 320px;
+  }
+  .city-banner__slide-title {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .city-banner__extour-net {
+    width: 243px;
+    height: 77px;
+    background: url(../images/extour-net-sm.png) 0 0 no-repeat;
+    margin-top: 8px;
   }
   .filter__button-box {
     position: absolute;
@@ -430,11 +608,30 @@
   .tour-type {
     padding-top: 31px;
   }
+  .tour-type .row {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .tour-type__item {
     margin-bottom: 13px;
+    height: 169px;
+  }
+  .tour-type__item img {
+    margin-bottom: -50px;
   }
   .tour-type h2 {
     margin-bottom: 32px;
+  }
+  .tour-type__info h4 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .tour-type__info p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .tour-type__button-box {
+    margin-top: 21px;
   }
   .tour-type-more p {
     font-size: 24px;
@@ -537,6 +734,9 @@
     padding-right: 15px;
     padding-bottom: 40px;
   }
+  .testimonials--tours {
+    padding-top: 40px;
+  }
   .testimonials__slider .owl-nav.disabled + .owl-dots {
     margin-left: 30px;
   }
@@ -577,14 +777,29 @@
     width: 100%;
     height: 211px;
   }
-  .partner img {
+  .partner__row {
+    padding-top: 30px;
+  }
+  .partner__row img {
     margin-bottom: 18px;
   }
-  .partner p {
+  .partner__row p {
     font-size: 26px;
     line-height: 36px;
     width: 100%;
     margin-bottom: 16px;
+  }
+  .partner__info {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+  .partner__info h4 {
+    font-size: 28px;
+  }
+  .partner__info-item {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
   }
   .footer ul {
     margin-right: -20px;
@@ -600,7 +815,117 @@
   .footer__social a {
     margin-right: 18px;
   }
-  .sm-fixed {
-    position: fixed;
+  .submenu--cities ul {
+    column-count: 2;
   }
+  .submenu--more > div > ul > li {
+    width: 100%;
+  }
+  .search-filter.visible {
+    display: none;
+  }
+  .master {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 56px;
+    background: transparent;
+  }
+  .master h2 {
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  .master p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+  .advantages {
+    margin-top: 40px;
+    padding-bottom: 20px;
+  }
+  .advantages h4 {
+    font-size: 26px;
+  }
+  .advantages__item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .here {
+    padding-top: 114px;
+    margin-bottom: 52px;
+  }
+  .here h2 {
+    margin-bottom: 54px;
+  }
+  .here h4 {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 17px;
+  }
+  .here .button {
+    height: 37px;
+    font-size: 17px;
+    line-height: 33px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .here__item {
+    width: 267px;
+  }
+  .here__slider-box {
+    margin: 0 26px;
+  }
+  .here__slider .owl-nav .owl-prev,
+  .here__slider .owl-nav .owl-next {
+    top: 70px;
+  }
+  .here__slider .owl-nav .owl-prev,
+  .here__slider .owl-nav .owl-prev:hover {
+    left: -35px;
+  }
+  .here__slider .owl-nav .owl-next,
+  .here__slider .owl-nav .owl-next:hover {
+    right: -34px;
+  }
+  .here__img {
+    width: 267px;
+    height: 179px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+  .here__img img {
+    width: 100%;
+  }
+  .subscribe {
+    height: 547px;
+    background: url(../images/subscribe-bg-sm.jpg) 50% 0 no-repeat;
+    background-size: cover;
+  }
+  .subscribe h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+  .subscribe img {
+    margin-bottom: 30px;
+  }
+  .subscribe p {
+    margin-bottom: 30px;
+  }
+  .subscribe input {
+    margin-bottom: 18px;
+    width: 100%;
+  }
+  .subscribe button {
+    width: 100%;
+  }
+  .subscribe__form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.hide-all {
+  display: none;
 }

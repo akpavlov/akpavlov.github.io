@@ -37,7 +37,6 @@ a {
 .container {
 	margin: 0 auto;
 	position: relative;
-	// background-color: #dfe;
 }
 
 .row {
@@ -102,15 +101,60 @@ a {
 	}	
 }
 
-.header {
+.button-white {
+	background-color: #fff;
+	color: #0091e9;
+	text-align: center;
+	font-size: 22px;
+	height: 51px;
+	line-height: 49px;
+	display: inline-block;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.button-transparent {
+	height: 52px;
+	line-height: 52px;
+	display: inline-block;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-weight: normal;
+	font-size: 30px;
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	padding-left: 32px;
+	padding-right: 32px;
+	cursor: pointer;
+	outline: none;
+}
+
+.header-background {
 	background: url(../images/header-bg.jpg) center 0 no-repeat;
 	background-size: cover;
+}
+
+.header {
 	color: #fff;
-	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 10;
+	&--normal {
+		position: fixed;
+		.header-background;
+	}
+	&--transparent {
+		position: absolute;
+	}
+	&--sm-fixed {
+		.header-background;
+	}
+	&--not-sm-fixed {
+		.header-background;
+	}
 	&__row {
 		display: flex;
 		justify-content: space-between;
@@ -133,6 +177,9 @@ a {
 					font-family: "Yanone Kaffeesatz", sans-serif;
 					font-size: 26px;
 					line-height: 50px;
+					&:hover {
+						text-decoration: underline;
+					}
 				}	
 			}
 		}
@@ -158,9 +205,14 @@ a {
 		padding-left: 27px;
 	}
 	&__menu-md-box {
-		border-top: 1px solid #404f58;
 		display: none;
+		&--bg {
+			background-color: rgba(60, 86, 105, 0.95);
+		}
 	}
+	&__menu-md-box-container {
+		border-top: 1px solid #404f58;
+		}
 	&__menu-md {
 		padding-left: 62px;
 		ul {
@@ -277,7 +329,7 @@ a {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		z-index: 1000000;
+		z-index: 100;
 		h3 {
 			font-weight: 600;
 			font-size: 30px;
@@ -317,8 +369,25 @@ a {
 			text-align: center;
 		}
 	}
-
+	&__content-box {
+		display: flex;
+	}
+	&__slide-title {
+		text-align: right;
+		font-family: "Yanone Kaffeesatz", sans-serif;
+		color: #fff;
+		text-shadow: 
+			0 17px 9px rgba(0, 0, 0, 0.69),
+			1px 1px 0px #324567,
+			1px -1px 0px #324567,
+			-1px 1px 0px #324567,
+			-1px -1px 0px #324567;
+	}
+	&__extour-net {
+		display: inline-block;
+	}
 }
+
 
 .breadcrambs {
 	font-size: 14px;
@@ -347,14 +416,16 @@ a {
 		.owl-dot {
 			span, &:hover span {
 				background: #fff;
-				margin: 5px 3px 5px 3px;			
+				width: 10px;
+				height: 10px;
+				margin: 5px 3px 5px 3px;
 			}			
 			&.active span, &.active:hover span {
 				background: #0091ea;
 				width: 14px;
 				height: 14px;
-				margin-left: 4px;
 				margin: 5px 2px 3px 1px;
+				// margin-left: 4px;
 			}
 		}		
 	}	
@@ -372,6 +443,18 @@ a {
 		}
 		.owl-next, .owl-next:hover {
 			background: url(../images/next-slide.png) 0 0 no-repeat;
+		}
+	}
+	.owl-nav {
+		.owl-prev,
+		.owl-next {
+			top: 0;
+		}
+		.owl-prev, .owl-prev:hover {
+			left: -57px;
+		}
+		.owl-next, .owl-next:hover {
+			right: -57px;
 		}
 	}
 	&--dots-grey {
@@ -398,7 +481,7 @@ a {
 
 // Главный слайдер ///////////////////
 
-.city-banner__slider {
+.city-banner__slider, .owl-theme-extour--banner  {
 	.owl-nav.disabled + .owl-dots {
 	    margin-top: -50px;
 	}
@@ -414,12 +497,6 @@ a {
 		.owl-prev,
 		.owl-next {
 			top: 57px;
-		}
-		.owl-prev, .owl-prev:hover {
-			left: -57px;
-		}
-		.owl-next, .owl-next:hover {
-			right: -57px;
 		}
 	}
 }
@@ -712,6 +789,10 @@ a {
 			}
 		}
 	}
+	&__button-box {
+		text-align: center;
+		margin-top: 10px;
+	}
 }
 
 .tour-type-more {
@@ -751,7 +832,6 @@ a {
 			position: absolute;
 			top: -20px;
 			left: 50%;
-			// transform: translate(-50%, -50%) scale(1);
 			transform: scale(7);
 			display: block;
 			width: 40px;
@@ -766,12 +846,7 @@ a {
 			border: 0;
 			color: #fff;
 			margin-right: 24px;
-
-			// color: #0091e8;
-			// border: 2px solid #0091e8;
-			// padding: 0 28px;
 			&:before {
-				// transform: scale(7);
 				transform: translate(-50%, -50%) scale(1);
 				z-index: 1;
 			}
@@ -1113,6 +1188,10 @@ a {
 .testimonials {
 	padding-top: 40px;
 	background-color: #f7f7fb;
+	&--tours {
+		background-color: #fff;
+		margin-bottom: 78px;
+	}
 	&__slider-box {
 		margin: 0 -30px 0 -30px;
 	}
@@ -1124,6 +1203,7 @@ a {
 		border-radius: 10px;
 		box-shadow: 0 0 30px 0 rgba(60, 108, 222, 0.25);
 		position: relative;
+		background-color: #ff9;
 	}
 	&__slide-row {
 		display: flex;
@@ -1277,26 +1357,51 @@ a {
 
 .partner {
 	background-color: #f1f1f1;
-	padding-top: 32px;
+	
 	padding-bottom: 32px;
+	.button {
+		font-size: 18px;
+		font-weight: 600;
+		height: 50px;	
+	}
 	&__row {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
+		padding-top: 45px;
+		p {
+			font-family: "Yanone Kaffeesatz", sans-serif;
+			font-size: 36px;
+			line-height: 36px;
+			color: #420299;
+			margin: 0 30px;
+			text-align: center;
+		}
 	}
-	p {
-		font-family: "Yanone Kaffeesatz", sans-serif;
-		font-size: 36px;
-		line-height: 36px;
-		color: #420299;
-		margin: 0 30px;
-		text-align: center;
+	&__info {
+		padding-top: 70px;
+		padding-bottom: 50px;
+		border-bottom: 1px solid #cdcdcd;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		h4 {
+			font-family: "Yanone Kaffeesatz", sans-serif;
+			font-weight: normal;
+			margin-bottom: 22px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			a {
+				font-weight: 600;
+				color: #420299;
+			}
+		}
 	}
-	.button {
-		font-size: 18px;
-		font-weight: 600;
-		height: 50px;	
+	&__info-item {
+		width: 31%;
 	}
 }
 
@@ -1386,5 +1491,474 @@ a {
 		font-size: 14px;
 		line-height: 50px;
 		font-weight: 600;
+	}
+}
+
+.submenu {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 20;
+	background-color: rgba(15, 34, 65, 0.87);
+	color: #fff;
+	font-size: 16px;
+	line-height: 50px;
+	display: none;
+	a {
+		color: #fff;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+	.container {
+		padding-right: 40px;
+	}
+	&__close {
+		width: 31px;
+		height: 31px;
+		background: url(../images/submenu-close-button.png) 0 0 no-repeat;
+		cursor: pointer;
+		position: absolute;
+		top: 12px;
+		right: 2px;
+	}
+	&--more {
+		&>div>ul {
+			display: flex;
+			flex-wrap: wrap;
+			&>li {
+				&>a {
+					background: url(../images/submenu-arr.png) 100% 7px no-repeat;
+					padding-right: 20px;
+				}
+				&>ul {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.search {
+	color: #fff;
+	width: 578px;
+	max-width: 100%;
+	margin-top: 95px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 24px;
+	&__form {
+		border-bottom: 1px solid #fff;
+		display: flex;
+		justify-content: space-between;
+		input, button {
+			font-family: 'Open Sans', sans-serif;
+			background-color: transparent;
+			color: #fff;
+			outline: none;
+			border: none;
+		}
+		input {
+			&::-webkit-input-placeholder { color:#fff; }
+			&::-moz-placeholder          { color:#fff; }
+			&:-moz-placeholder           { color:#fff; }
+			&:-ms-input-placeholder      { color:#fff; }
+			font-size: 16px;
+			line-height: 40px;
+			width: 100%;
+			flex-shrink: 1;
+			margin-right: 10px;
+		}
+		button {
+			font-size: 20px;
+			line-height: 40px;
+			font-weight: 600;
+			width: 110px;
+			flex-shrink: 0;
+			background: transparent url(../images/search.png) 4px 50% no-repeat;
+			padding-left: 30px;
+			cursor: pointer;
+		}
+	}
+	&__filter-button {
+		font-size: 14px;	
+		font-weight: 500;
+		text-align: right;
+		margin-top: 10px;
+		span {
+			border-bottom: 1px dashed #fff;
+			cursor: pointer;
+		}
+	}
+}
+
+.search-filter {
+	justify-content: space-between;
+	align-items: center;
+	display: none;
+	&.visible {
+		display: flex;
+	}
+	select, input {
+		font-family: "Open Sans", sans-serif;
+		font-size: 17px;
+		color: #fff;
+		height: 30px;
+		border: 1px solid #fff;
+		border-radius: 5px;
+		background-color: transparent;
+		padding-left: 8px;
+		padding-right: 20px;
+		outline: none;
+	}
+	select {
+		-webkit-appearance: none;
+		background-image: url('../images/drop-down-select.png');
+		background-position: 95% center;
+		background-repeat: no-repeat;
+		-moz-appearance: none;
+		text-overflow: '';
+		-ms-appearance: none;
+		appearance: none!important;
+		width: 225px;
+	}
+	select::-ms-expand {
+		display: none;
+	}	
+	option {
+		color: #555;
+		font-family: "Open Sans", sans-serif;
+		font-size: 17px;
+	}
+	input {
+		width: 244px;
+		background: transparent url(../images/calendar.png) 97% 50% no-repeat;
+	}
+}
+
+.master {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 56px;
+	background: url(../images/master-lg.png) 40% 30px no-repeat;
+	h2 {
+		font-weight: normal;
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 24px;
+		line-height: 24px;
+		margin-bottom: 33px;
+	}
+}
+
+.advantages {
+	margin-top: 85px;
+	padding-top: 45px;
+	color: #fff;
+	padding-bottom: 60px;
+	background: url(../images/advantages-bg.jpg) 0 0 repeat-y;
+	background-size: contain;
+	h4 {
+		font-family: "Yanone Kaffeesatz", sans-serif;
+		font-weight: normal;
+		font-size: 32px;
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__item {
+		width: 30%;
+	}
+	&__img {
+		height: 90px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+	}
+}
+
+.here {
+	padding-top: 114px;
+	margin-bottom: 95px;
+	h2 {
+		margin-bottom: 54px;
+	}
+	h4 {
+		font-family: "Yanone Kaffeesatz", sans-serif;
+		font-size: 28px;
+		font-weight: 400;
+		margin-bottom: 17px;
+	}
+	.button {
+		height: 37px;
+		font-size: 17px;
+		line-height: 33px;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	&__item {
+		width: 471px;
+		text-align: center;
+	}
+	&__slider-box {
+		margin: 0 99px;
+		// background-color: #ff1;
+	}
+	&__slider {
+		.owl-nav {
+			.owl-prev,
+			.owl-next {
+				top: 140px;
+			}
+			.owl-prev, .owl-prev:hover {
+				left: -90px;
+			}
+			.owl-next, .owl-next:hover {
+				right: -90px;
+			}
+		}
+	}
+	&__img {
+		width: 471px;
+		height: 316px;
+		border-radius: 10px;
+		overflow: hidden;
+		margin-bottom: 22px;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.subscribe {
+	color: #fff;
+	&__form {
+		padding-top: 44px;
+	}
+	h3 {
+		font-family: "Yanone Kaffeesatz", sans-serif;
+		font-weight: 400;
+		margin-bottom: 40px;
+	}
+	p {
+		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 46px;
+	}
+	img {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 70px;
+		margin-bottom: 52px;
+	}
+	input {
+		width: 332px;
+		height: 41px;
+		background-color: transparent;
+		border: 1px solid #fff;
+		border-radius: 3px;
+		color: #fff;
+		font-size: 16px;
+		padding-left: 14px;
+		padding-right: 14px;
+		margin-bottom: 50px;
+		&::-webkit-input-placeholder { color:#fff; }
+		&::-moz-placeholder          { color:#fff; }
+		&:-moz-placeholder           { color:#fff; }
+		&:-ms-input-placeholder      { color:#fff; }
+	}
+	button {
+		width: 332px;
+	}
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.35);
+	z-index: 100;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	&.visible {
+		display: flex;
+	}
+}
+
+.modal {
+	background-color: #fff;
+	border-radius: 10px;
+	max-width: 94vw;
+	position: relative;
+	padding-top: 20px;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	display: none;
+	overflow: hidden;
+	&.visible {
+		display: block;
+	}
+	h3 {
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 36px;
+		text-align: center;
+		color: #4b4b4b;		
+		padding-left: 30px;
+		padding-right: 40px;
+	}
+	input[type="text"] {
+		width: 100%;
+		height: 61px;
+		border: 1px solid #d9e3f8;
+		border-radius: 6px;
+		font-family: "Yanone Kaffeesatz", sans-serif;
+		font-weight: normal;
+		font-size: 24px;
+		color: #868686;
+		padding-left: 38px;
+		margin-bottom: 31px;
+		padding-top: 3px;
+		&::-webkit-input-placeholder { color:#868686; }
+		&::-moz-placeholder          { color:#868686; }
+		&:-moz-placeholder           { color:#868686; }
+		&:-ms-input-placeholder      { color:#868686; }
+	}
+	label {
+		font-size: 18px;
+		color: #868686;
+		position: relative;
+		padding-left: 30px;
+		padding-top: 1px;
+		display: inline-block;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 14px;
+			height: 14px;
+			border-radius: 5px;
+			border: 1px solid #d9e3f8;
+
+		}
+	}
+	input[type="checkbox"] {
+		display: none;
+	}
+	input:checked+label {
+		&:before {
+			background: url(../images/check.png) 2px 2px no-repeat;
+		}
+	}
+	&__close-button {
+		position: absolute;
+		top: 11px;
+		right: 12px;
+		width: 30px;
+		height: 30px;
+		background: url(../images/modal-close-button.png) 0 0 no-repeat;
+		cursor: pointer;
+		z-index: 2;
+	}
+	&__input-user {
+		background: url(../images/input-user.png) 16px 50% no-repeat;
+	}
+	&__input-lock {
+		background: url(../images/input-lock.png) 16px 50% no-repeat;
+	}
+	&__input-mail {
+		background: url(../images/input-mail.png) 16px 50% no-repeat;
+	}
+	&__input-phone {
+		background: url(../images/input-phone.png) 16px 50% no-repeat;
+	}
+}
+
+.login {
+	width: 370px;
+	h3 {
+		margin-bottom: 19px;
+	}
+	label {
+		margin-bottom: 25px;
+	}
+	button {
+		width: 100%;
+		height: 74px;
+		cursor: pointer;
+		border: none;
+		outline: none;
+		font-family: "Yanone Kaffeesatz", sans-serif;
+		font-size: 30px;
+		color: #fff;
+		background: url(../images/button-bg.jpg) 0 0 repeat-y;
+		background-size: 100% auto;
+	}
+	&__by {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 31px;
+		img {
+			margin-left: 7px;
+			margin-right: 7px;
+		}
+	}
+	&__controls {
+		padding-left: 38px;
+		padding-right: 38px;
+	}
+	&__link {
+		font-size: 19px;
+		margin-bottom: 28px;
+		a {
+			color: #0092e9;
+			text-decoration: underline;
+		}
+	}
+}
+
+.topartner {
+	width: 569px;
+	background: #fff url(../images/topartner-bg.jpg) center 0 no-repeat;
+	padding-top: 0;
+	h3 {
+		position: absolute;
+		top: 20px;
+		left: 0;
+		right: 0;	
+	}
+	label {
+		margin-bottom: 12px;
+	}
+	&__controls {
+		padding-top: 226px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 289px;
+		max-width: 90%;
+	}
+	&__button-box {
+		height: 74px;
+		background-color: #7c99d6;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }

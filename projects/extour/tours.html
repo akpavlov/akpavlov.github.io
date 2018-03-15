@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Экскурсии</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/owl.theme.default.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="datepicker/datepicker.css">
+	<link rel="stylesheet" href="css/animate.custom.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<header class="header header--transparent">
+		<div class="container">
+			<div class="header__row">
+				<div class="mobile-menu-button mobile-menu-button--md md-show"></div>
+				<div class="mobile-menu-button mobile-menu-button--sm sm-show"></div>
+				<div class="header__logo">
+					<img src="images/logo.png" alt="">
+					<p class="lg-show">Начни новую жизнь с extour.net</p>
+				</div>
+				<div class="header__menu lg-show">
+					<ul>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#" class="submenu-open" data-submenu="submenu--cities">Города</a></li>
+						<li><a href="#">Вопросы и ответы</a></li>
+						<li><a href="#">Галерея</a></li>
+						<li><a href="#" class="submenu-open" data-submenu="submenu--more">Еще</a></li>
+					</ul>
+				</div> <!-- header__menu-box -->
+				<div class="header__user sm-hide">
+					<a href="#" class="header__login">Вход</a>/
+					<a href="#" class="header__signup">Регистрация</a>
+				</div>
+			</div> <!-- header__row -->
+		</div> <!-- container -->
+		<div class="header__menu-md-box">
+			<div class="container header__menu-md-box-container">
+				<div class="header__menu-md"></div>
+			</div> <!-- container header__menu-md-box-container -->
+		</div> <!-- header__menu-md-box -->
+
+		<div class="header__menu-sm">
+			<div class="header__social">
+				<a href="#"><img src="images/social-fb.png" alt=""></a>
+				<a href="#"><img src="images/social-inst.png" alt=""></a>
+				<a href="#"><img src="images/social-tw.png" alt=""></a>
+				<a href="#"><img src="images/social-vk.png" alt=""></a>
+				<a href="#"><img src="images/social-ok.png" alt=""></a>
+			</div> <!-- header__social -->
+		</div> <!-- header__menu-sm -->
+	</header>
+
+	<div class="submenu submenu--cities">
+		<div class="container">
+			<div class="submenu__close"></div>
+			<ul>
+				<li><a href="#">Абу-Даби</a></li>
+				<li><a href="#">Адлер</a></li>
+				<li><a href="#">Алматы</a></li>
+				<li><a href="#">Алтай</a></li>
+				<li><a href="#">Алушта</a></li>
+				<li><a href="#">Амстердам</a></li>
+				<li><a href="#">Анапа</a></li>
+				<li><a href="#">Анталия</a></li>
+				<li><a href="#">Архипелаг Лос-Рокес</a></li>
+				<li><a href="#">Астана</a></li>
+				<li><a href="#">Астрахань</a></li>
+				<li><a href="#">Афины</a></li>
+				<li><a href="#">Байкал</a></li>
+				<li><a href="#">Баку</a></li>
+				<li><a href="#">о. Бали</a></li>
+				<li><a href="#">Бангкок</a></li>
+				<li><a href="#">Барселона</a></li>
+				<li><a href="#">Батуми</a></li>
+				<li><a href="#">Бейрут</a></li>
+				<li><a href="#">Белград</a></li>
+				<li><a href="#">Берлин</a></li>
+				<li><a href="#">Бишкек</a></li>
+				<li><a href="#">Бора-Бора</a></li>
+				<li><a href="#">Боракай</a></li>
+				<li><a href="#">Боржоми</a></li>
+				<li><a href="#">о. Бохоль</a></li>
+				<li><a href="#">Братислава</a></li>
+				<li><a href="#">Брюссель</a></li>
+				<li><a href="#">Будапешт</a></li>
+				<li><a href="#">Бургас</a></li>
+				<li><a href="#">Бухара</a></li>
+				<li><a href="#">Буэнос-Айрес</a></li>
+				<li><a href="#">Ванкувер</a></li>
+				<li><a href="#">Варна</a></li>
+				<li><a href="#">Варшава</a></li>
+				<li><a href="#">Вашингтон</a></li>
+				<li><a href="#">Великий Новгород</a></li>
+				<li><a href="#">Великий Устюг</a></li>
+				<li><a href="#">Вена</a></li>
+				<li><a href="#">Венеция</a></li>
+				<li><a href="#">Верона</a></li>
+				<li><a href="#">Вильнюс</a></li>
+				<li><a href="#">Вис</a></li>
+				<li><a href="#">Владимир</a></li>
+				<li><a href="#">Волгоград</a></li>
+				<li><a href="#">Вологда</a></li>
+				<li><a href="#">Воронеж</a></li>
+				<li><a href="#">Выборг</a></li>
+				<li><a href="#">Вьентьян</a></li>
+				<li><a href="#">Гавана</a></li>
+			</ul>
+		</div> <!-- container -->
+	</div> <!-- submenu-cities -->
+
+	<div class="submenu submenu--more">
+		<div class="container">
+			<div class="submenu__close"></div>
+			<ul>
+				<li>
+					<a href="#">Справочная</a>
+					<ul>
+						<li><a href="#">Раздел 1</a></li>
+						<li><a href="#">Раздел 2</a></li>
+						<li><a href="#">Раздел 3</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Материалы</a>
+					<ul>
+						<li><a href="#">Раздел 4</a></li>
+						<li><a href="#">Раздел 5</a></li>
+						<li><a href="#">Раздел 6</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Клиенту</a>
+					<ul>
+						<li><a href="#">Раздел 7</a></li>
+						<li><a href="#">Раздел 8</a></li>
+						<li><a href="#">Раздел 9</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Экскурсоводу</a>
+					<ul>
+						<li><a href="#">Раздел 10</a></li>
+						<li><a href="#">Раздел 11</a></li>
+						<li><a href="#">Раздел 12</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div> <!-- container -->
+	</div> <!-- submenu- -more -->
+
+
+	<div class="city-banner city-banner--tours">
+
+		<div class="city-banner__static">
+			<div class="container">
+
+				<div class="search wow fadeInUp" data-wow-duration="2s">
+					<form action="#" class="search__form">
+						<input type="text" placeholder="Экскурсии в Сочи.... &nbsp; &nbsp; Введите ваш запрос">
+						<button>Найти</button>
+					</form> <!-- search__form -->
+					<p class="search__filter-button sm-hide"><span>Расширенный поиск</span></p>
+				</div> <!-- search -->
+
+				<form action="#" class="search-filter">
+					<select name="country" id="country">
+						<!-- <option value="Выберите страну">Выберите страну</option> -->
+						<option value="Страна">Страна</option>
+					</select>
+					<select name="city" id="city">
+						<!-- <option value="Выберите город">Выберите город</option> -->
+						<option value="Город">Город</option>
+					</select>
+					<select name="type-of-tour" id="type-of-tour">
+						<option value="Тип экскурсии">Тип экскурсии</option>
+					</select>
+					<input type="text" name="dates" id="dates" value="06.03.2018 по 23.03.2018">
+					<button class="button"><span>Подобрать</span></button>
+				</form> <!-- search-filter -->
+
+			</div>
+		</div> <!-- city-banner__static -->
+
+		<div class="owl-carousel owl-theme owl-theme-extour owl-theme-extour--dots-container owl-theme-extour--dots-left city-banner__slider">
+
+			<div class="city-banner__slide">
+				<div class="city-banner__slide-image">
+					<img src="images/tours-slide-1.jpg" alt="">
+				</div>
+				<div class="city-banner__slide-content">
+					<div class="container">
+						<div class="city-banner__content-box">
+							<div>
+								<p class="city-banner__slide-title wow fadeInUp" data-wow-delay="0.6s">
+									Путешествуй по всей России с<br>
+									<span class="city-banner__extour-net"></span>
+								</p>
+							</div>
+						</div> <!-- city-banner__content-box -->
+					</div>
+				</div>
+			</div> <!-- city-banner__slide -->
+
+			<div class="city-banner__slide">
+				<div class="city-banner__slide-image">
+					<img src="images/tours-slide-2.jpg" alt="">
+				</div>
+				<div class="city-banner__slide-content">
+					<div class="container">
+						<div class="city-banner__content-box">
+							<div>
+								<p class="city-banner__slide-title">
+									Путешествуй по всей России с<br>
+									<span class="city-banner__extour-net"></span>
+								</p>
+							</div>
+						</div> <!-- city-banner__content-box -->
+					</div>
+				</div>
+			</div> <!-- city-banner__slide -->
+
+			<div class="city-banner__slide">
+				<div class="city-banner__slide-image">
+					<img src="images/tours-slide-3.jpg" alt="">
+				</div>
+				<div class="city-banner__slide-content">
+					<div class="container">
+						<div class="city-banner__content-box">
+							<div>
+								<p class="city-banner__slide-title">
+									Путешествуй по всей России с<br>
+									<span class="city-banner__extour-net"></span>
+								</p>
+							</div>
+						</div> <!-- city-banner__content-box -->
+					</div>
+				</div>
+			</div> <!-- city-banner__slide -->
+
+		</div> <!-- city-slider -->
+	</div> <!-- city-banner -->
+
+	<div class="master">
+		<div class="container">
+			<h2 class="wow fadeInUp">Не можете определиться с экскурсией?</h2>
+			<p class="wow fadeInUp" data-wow-delay="0.4s">Запустите мастер подбора экскурсий </p>
+			<a href="#" class="button wow fadeInUp" data-wow-delay="0.6s"><span>Запустить</span></a>
+		</div> <!-- container -->
+	</div> <!-- master -->
+
+
+	<div class="tour-type tour-type--cities">
+		<div class="container">
+			<h2>35 городов России</h2>
+
+			<div class="row">
+
+				<a href="#" class="tour-type__item col col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0s">
+					<img src="images/city-1.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.4s">
+						<h4>Санкт-Петербург</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.2s">
+					<img src="images/city-2.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.6s">
+						<h4>Москва</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.4s">
+					<img src="images/city-3.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.8s">
+						<h4>Сочи</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0s">
+					<img src="images/city-4.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.4s">
+						<h4>Архангельск</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.2s">
+					<img src="images/city-5.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.6s">
+						<h4>Краснодар</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.4s">
+					<img src="images/city-6.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.8s">
+						<h4>Новосибирск</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0s">
+					<img src="images/city-7.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.4s">
+						<h4>Калининград</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+
+				<a href="#" class="tour-type__item col col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.2s">
+					<img src="images/city-8.jpg" alt="">
+					<div class="tour-type__info wow fadeIn" data-wow-delay="0.6s">
+						<h4>Нижний Новгород</h4>
+						<p>
+							<span>246 экскурсии</span>
+							<span>182 гида</span>
+						</p>
+					</div> <!-- tour-type__info -->
+				</a> <!-- tour-type__item -->
+			</div> <!-- row -->
+			<div class="tour-type__button-box">
+				<a href="#" class="button"><span>Все города</span></a>
+			</div>
+		</div> <!-- container -->
+	</div> <!-- tour-type -->
+
+	<div class="advantages">
+		<div class="container">
+			<div class="advantages__row">
+				<div class="advantages__item wow fadeIn" data-wow-delay="0s">
+					<div class="advantages__img">
+						<img src="images/advantage-1.png" alt="">
+					</div>
+					<h4>Бронирование онлайн</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... 
+					</p>
+				</div> <!-- advantages__item -->
+				<div class="advantages__item wow fadeIn" data-wow-delay="0.3s">
+					<div class="advantages__img">
+						<img src="images/advantage-2.png" alt="">
+					</div>
+					<h4>Только проверенные гиды</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... 
+					</p>
+				</div> <!-- advantages__item -->
+				<div class="advantages__item wow fadeIn" data-wow-delay="0.6s">
+					<div class="advantages__img">
+						<img src="images/advantage-3.png" alt="">
+					</div>
+					<h4>Не нужно платить все сразу</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... 
+					</p>
+				</div> <!-- advantages__item -->
+			</div> <!-- advantages__row -->
+		</div> <!-- container -->
+	</div> <!-- advantages -->
+
+	<div class="here">
+		<div class="container">
+			<h2>Вы здесь еще не были</h2>
+			<div class="here__slider-box">
+				<div class="here__slider owl-carousel owl-theme owl-theme-extour">
+
+					<div class="here__item">
+						<div class="here__img">
+							<img src="images/here-1.jpg" alt="">
+						</div> <!-- here__img -->
+						<h4>Обзорная экскурсия по Санкт-Петербургу</h4>
+						<a href="#" class="button"><span>Забронировать</span></a>
+					</div> <!-- here__item -->
+
+					<div class="here__item">
+						<div class="here__img">
+							<img src="images/here-2.jpg" alt="">
+						</div> <!-- here__img -->
+						<h4>Автобусная экскурсия по Москве</h4>
+						<a href="#" class="button"><span>Забронировать</span></a>
+					</div> <!-- here__item -->
+
+					<div class="here__item">
+						<div class="here__img">
+							<img src="images/here-1.jpg" alt="">
+						</div> <!-- here__img -->
+						<h4>Обзорная экскурсия по Санкт-Петербургу</h4>
+						<a href="#" class="button"><span>Забронировать</span></a>
+					</div> <!-- here__item -->
+
+					<div class="here__item">
+						<div class="here__img">
+							<img src="images/here-2.jpg" alt="">
+						</div> <!-- here__img -->
+						<h4>Автобусная экскурсия по Москве</h4>
+						<a href="#" class="button"><span>Забронировать</span></a>
+					</div> <!-- here__item -->
+			
+				</div> <!-- here__slider-box -->
+			</div> <!-- here__slider-box -->
+		</div> <!-- container -->
+	</div> <!-- here -->
+
+	<div class="subscribe">
+		<div class="container">
+			<form action="#" class="subscribe__form">
+				<img src="images/airplane.png" alt="" class="wow fadeIn" data-wow-delay="0s">
+				<h3 class="wow fadeIn" data-wow-delay="0.2s">Подпишись на рассылку</h3>
+				<p class="wow fadeIn" data-wow-delay="0.4s">
+					Лайфхаки про путешествия, специальные предложения на экскурсии, крутые идея для больших путешествий и уикэндов — подписывайтесь на рассылки от Extour!
+				</p>
+				<input type="text" placeholder="Ваш e-mail" class="wow fadeIn" data-wow-delay="0.6s">
+				<button class="button-white wow fadeIn" data-wow-delay="0.8s">Подписаться</button>
+			</form> <!-- subscribe__form -->
+		</div> <!-- container -->
+	</div> <!-- subscribe -->
+
+	<div class="testimonials testimonials--tours">
+		<div class="container">
+			<h2>Отзывы путешественников</h2>			
+			<div class="testimonials__slider-box">
+				<div class="testimonials__slider owl-carousel owl-theme owl-theme-extour owl-theme-extour--dots-grey owl-theme-extour--dots-left">
+					
+					<div class="testimonials__slide-box">
+						<div class="testimonials__slide">
+							<div class="testimonials__rating">4</div>
+							<div class="testimonials__slide-row">
+								<div class="testimonials__slide-col-img">
+									<img src="images/testimonial-user1.jpg" alt="">
+								</div> <!-- testimonials__slide-col-img -->
+								<div class="testimonials__slide-col-info">
+									<h3>Отзыв об экскурсии Ночная прогулка по ночному Петербургу</h3>
+									<p class="testimonials__user-info">Иванова София<br>г. Санкт- Петербург</p>
+									<p class="testimonials__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum... 
+									</p> <!-- testimonials__text -->
+								</div> <!-- testimonials__slide-col-info -->
+							</div> <!-- testimonials__slide-row -->
+						</div> <!-- testimonials__slide -->
+					</div> <!-- testimonials__slide-box -->
+
+					<div class="testimonials__slide-box">
+						<div class="testimonials__slide">
+							<div class="testimonials__rating">4</div>
+							<div class="testimonials__slide-row">
+								<div class="testimonials__slide-col-img">
+									<img src="images/testimonial-user1.jpg" alt="">
+								</div> <!-- testimonials__slide-col-img -->
+								<div class="testimonials__slide-col-info">
+									<h3>Отзыв об экскурсии Ночная прогулка по ночному Петербургу</h3>
+									<p class="testimonials__user-info">Иванова София<br>г. Санкт- Петербург</p>
+									<p class="testimonials__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum... 
+									</p> <!-- testimonials__text -->
+								</div> <!-- testimonials__slide-col-info -->
+							</div> <!-- testimonials__slide-row -->
+						</div> <!-- testimonials__slide -->
+					</div> <!-- testimonials__slide-box -->
+
+					<div class="testimonials__slide-box">
+						<div class="testimonials__slide">
+							<div class="testimonials__rating">4</div>
+							<div class="testimonials__slide-row">
+								<div class="testimonials__slide-col-img">
+									<img src="images/testimonial-user1.jpg" alt="">
+								</div> <!-- testimonials__slide-col-img -->
+								<div class="testimonials__slide-col-info">
+									<h3>Отзыв об экскурсии Ночная прогулка по ночному Петербургу</h3>
+									<p class="testimonials__user-info">Иванова София<br>г. Санкт- Петербург</p>
+									<p class="testimonials__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum... 
+									</p> <!-- testimonials__text -->
+								</div> <!-- testimonials__slide-col-info -->
+							</div> <!-- testimonials__slide-row -->
+						</div> <!-- testimonials__slide -->
+					</div> <!-- testimonials__slide-box -->
+					
+				</div> <!-- testimonials__slider -->
+			</div> <!-- testimonials__slider-box -->
+			<a class="testimonials__more sm-hide" href="#">Посмотреть все</a>
+		</div> <!-- container -->
+	</div> <!-- testimonials -->
+
+
+	<div class="partner">
+		<div class="container">
+			<div class="partner__info">
+				<div class="partner__info-item">
+					<h4>Хотите стать гидом?</h4>
+					<p><a href="#">Отправьте заявку</a> <br> на экскурсию</p>
+				</div> <!-- partner__info-item -->
+				<div class="partner__info-item">
+					<h4>Заработайте вместе с нами!</h4>
+					<p>Посмотреть список <br> <a href="#">Вакансий</a></p>
+				</div> <!-- partner__info-item -->
+				<div class="partner__info-item">
+					<h4>Остались вопросы?</h4>
+					<p>Звоните по телефону:<br class="sm-show"> +9-999-999-99-99<br>Или <a href="#">закажите звонок</a></p>
+				</div> <!-- partner__info-item -->
+			</div> <!-- partner__info -->
+			<div class="partner__row">
+				<img src="images/partners.png" alt="">
+				<p>Мы будем рады <br class="sm-show"> сотрудничать с Вами</p>
+				<a href="#" class="button violet" id="to-partner"><span>Стать партнером</span></a>
+			</div> <!-- partner__row -->
+		</div> <!-- container -->
+	</div> <!-- partner -->
+
+	<footer class="footer">
+		<div class="container">	
+			<div class="footer__row row">
+
+				<div class="col col-lg-3 col-md-4">
+					<h3>Информация</h3>		
+					<ul class="temp">
+						<li><a href="#">О проекте</a></li>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Партнерская программа</a></li>
+						<li><a href="#">Все гиды</a></li>
+						<li><a href="#">Все города</a></li>
+						<li><a href="#">Добавить экскурсию</a></li>
+					</ul>
+				</div> <!-- col -->
+
+				<div class="col col-lg-3 col-md-4">
+					<h3>Помощь</h3>		
+					<ul>
+						<li><a href="#">Часто задаваемые вопросы</a></li>
+						<li><a href="#">Политика возврата</a></li>
+						<li><a href="#">Договор оферты</a></li>
+						<li><a href="#">Политика конфиденциальности</a></li>
+						<li><a href="#">Статьи</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+					</ul>
+				</div> <!-- col -->
+
+				<div class="col col-lg-3 col-md-4 sm-hide">
+					<h3>Топы экскурсий</h3>		
+						<ul>
+							<li><a href="#">Все категории экскурсий</a></li>
+							<li><a href="#">Все экстримальные экскурсии</a></li>
+							<li><a href="#">Все обзорные экскурсии</a></li>
+							<li><a href="#">Все индивидуальные экскурсии</a></li>
+							<li><a href="#">Все пешие экскурсии</a></li>
+							<li><a href="#">Все автобусные экскурсии</a></li>
+						</ul>
+				</div> <!-- col -->
+
+				<div class="footer__social col col-lg-3">
+					<h3>Подписка</h3>
+					<div>
+						<a href="#" class="footer__social-fb">Facebook</a>
+						<a href="#" class="footer__social-inst">Instagram</a>
+						<a href="#" class="footer__social-tw">Twitter</a>
+						<a href="#" class="footer__social-vk">ВКонтакте</a>
+						<a href="#" class="footer__social-ok">Одноклассники</a>
+					</div>	<!-- footer__social -->
+				</div> <!-- col -->
+
+			</div> <!-- footer__row -->
+		</div> <!-- container -->
+
+		<hr>
+
+		<div class="container">
+			<div class="footer__sub">
+				<div class="footer__sub-row">
+					<div class="footer__payment">
+						<h3>Мы принимаем:</h3>
+						<img src="images/payment-mir.png" class="sm-hide" alt="">
+						<img src="images/payment-visa.png" class="sm-hide" alt="">
+						<img src="images/payment-mastercard.png" class="sm-hide" alt="">
+						<img src="images/payment-yandex-money.png" class="sm-hide" alt="">
+						<img src="images/payment-mir-sm.png" class="sm-show" alt="">
+						<img src="images/payment-visa-sm.png" class="sm-show" alt="">
+						<img src="images/payment-mastercard-sm.png" class="sm-show" alt="">
+						<img src="images/payment-yandex-money-sm.png" class="sm-show" alt="">
+					</div> <!-- footer__payment -->
+					<div class="footer__copy">© 2017 Команда Extour</div>
+				</div> <!-- footer__sub-row -->
+			</div> <!-- footer__sub -->
+		</div> <!-- container -->
+	</footer>
+
+	<div class="overlay">
+
+		<form action="#" class="modal login">
+			<div class="modal__close-button"></div>
+			<h3>Войти с помощью</h3>
+			<div class="login__by">
+				<a href="#"><img src="images/login-social-fb.png" alt=""></a>
+				<a href="#"><img src="images/login-social-vk.png" alt=""></a>
+				<a href="#"><img src="images/login-social-ok.png" alt=""></a>
+			</div> <!-- login__by -->
+			<div class="login__controls">
+				<input type="text" class="modal__input-user" placeholder="Логин">
+				<input type="text" class="modal__input-user" placeholder="E-mail">
+				<input type="text" class="modal__input-lock" placeholder="Пароль">
+				<input type="checkbox" name="save-password" id="save-password" checked>
+				<label for="save-password">Запомнить пароль</label>
+				<p class="login__link"><a href="#">Регистрация для экскурсоводов</a></p>
+			</div> <!-- login__controls -->
+			<button>Зарегистрироваться</button>
+		</form> <!-- login -->
+
+		<form action="#" class="modal topartner">
+			<div class="modal__close-button"></div>
+			<h3>Хотите стать нашим партнером</h3>
+			<div class="topartner__controls">
+				<input type="text" class="modal__input-user" placeholder="Имя">
+				<input type="text" class="modal__input-mail" placeholder="E-mail">
+				<input type="text" class="modal__input-phone" placeholder="Телефон">
+				<input type="checkbox" name="agree" id="agree">
+				<label for="agree">Я согласен на обработку личных данных</label>
+			</div> <!-- topartner__controls -->
+			<div class="topartner__button-box">
+				<button class="button-transparent">Стать партнером</button>
+			</div> <!-- topartner__button-box -->
+		</form> <!-- topartner -->
+
+	</div> <!-- overlay -->
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="datepicker/datepicker.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -32,6 +32,31 @@
   .footer__bottom-text {
     padding-right: 10%;
   }
+  .vacancy__info {
+    width: 58%;
+  }
+  .vacancy__form {
+    width: 40%;
+  }
+  .statistics__item p:nth-child(1) {
+    font-size: 13px;
+    line-height: 13px;
+  }
+  .statistics__item p:nth-child(2) {
+    font-size: 110px;
+    letter-spacing: -0.1em;
+    position: absolute;
+    left: -10px;
+    top: -3px;
+  }
+  .statistics__item p:nth-child(3) {
+    font-size: 26px;
+    padding-left: 112px;
+  }
+  .statistics__item p:nth-child(4) {
+    font-size: 13px;
+    padding-left: 112px;
+  }
 }
 @media screen and (max-width: 930px) {
   .md-hide {
@@ -80,6 +105,133 @@
   }
   .consultation {
     margin-bottom: 20px;
+  }
+  .vacancy {
+    text-align: center;
+  }
+  .vacancy__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .vacancy__info {
+    width: 100%;
+  }
+  .vacancy__form {
+    width: 96%;
+    max-width: 580px;
+    margin-bottom: 40px;
+  }
+  .vacancies-banner {
+    text-align: center;
+  }
+  .vacancies-banner__info {
+    width: 100%;
+  }
+  .vacancies-banner__button-box {
+    text-align: center;
+  }
+  .income {
+    border-top: 2px solid #a9a9a9;
+  }
+  .income:before {
+    display: none;
+  }
+  .income p {
+    margin-bottom: 320px;
+  }
+  .income__info {
+    text-align: center;
+    width: 100%;
+    background: url(../images/income-img-md.jpg) 50% 100% no-repeat;
+    padding-top: 50px;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+  .income__info:before {
+    display: none;
+  }
+  .income__img {
+    display: none;
+  }
+  .vacancies {
+    padding-top: 70px;
+  }
+  .vacancies h2 {
+    margin-bottom: 65px;
+  }
+  .vacancies__item {
+    padding-top: 10px;
+    padding-bottom: 23px;
+  }
+  .vacancies__col-1 {
+    width: 69%;
+    padding-right: 20px;
+  }
+  .vacancies__col-1 p:nth-child(1) {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .vacancies__col-1 p:nth-child(2) {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  .vacancies__col-2 {
+    width: 29%;
+    padding-right: 10px;
+  }
+  .vacancies__col-2 p {
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .vacancies__col-3 {
+    display: none;
+  }
+}
+@media screen and (max-width: 890px) {
+  .hide-890 {
+    display: none;
+  }
+  .statistics {
+    height: auto;
+    background: #f5f4fa url(../images/statistics-bg-xs.jpg) 0 100% no-repeat;
+    background-size: auto;
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+  .statistics h2 {
+    margin-bottom: 30px;
+  }
+  .statistics__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .statistics__item {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .statistics__item p:nth-child(1) {
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .statistics__item p:nth-child(2) {
+    font-size: 90px;
+    line-height: 90px;
+    letter-spacing: -0.1em;
+    position: static;
+    left: 0;
+    margin-top: -4px;
+  }
+  .statistics__item p:nth-child(3) {
+    font-size: 30px;
+    padding-left: 0;
+    margin-top: -10px;
+  }
+  .statistics__item p:nth-child(4) {
+    font-size: 15px;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 700px) {
@@ -132,6 +284,92 @@
   .footer__bottom-social img {
     margin-left: 5px;
     margin-right: 5px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .vacancy__form {
+    width: 98%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .vacancies-banner__info {
+    padding-top: 90px;
+  }
+  .advantages__row {
+    flex-wrap: wrap;
+  }
+  .advantages__item {
+    width: 100%;
+  }
+  .advantages__hover-box {
+    left: 0;
+    padding-bottom: 0;
+  }
+  .advantages__hover-img {
+    width: 100px;
+  }
+  .success {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .success h2 {
+    font-size: 36px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .success p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+    width: 100%;
+    margin-bottom: 74px;
+    padding-top: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: url(../images/saccess-item.png) 50% 0 no-repeat;
+  }
+  .vacancies {
+    padding-top: 70px;
+    margin-bottom: 30px;
+  }
+  .vacancies h2 {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  .vacancies__item {
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 15px;
+    padding-bottom: 28px;
+    text-align: center;
+  }
+  .vacancies__col-1 {
+    padding-left: 0;
+    padding-right: 0px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .vacancies__col-1 p:nth-child(1) {
+    font-size: 15px;
+    line-height: 26px;
+    color: #f2131a;
+  }
+  .vacancies__col-1 p:nth-child(2) {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .vacancies__col-1 p:nth-child(2) a {
+    color: #000;
+  }
+  .vacancies__col-2 {
+    width: 100%;
+    padding-right: 10px;
+  }
+  .vacancies__col-2 p {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 500px) {

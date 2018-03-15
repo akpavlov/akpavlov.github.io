@@ -1,0 +1,1 @@
+В файле index.html в блок header добавлен класс header--normal

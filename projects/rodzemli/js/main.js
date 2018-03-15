@@ -24,4 +24,15 @@ $(function() {
 	$('.header__tel').addClass('xs-hide');
 
 	///////////////////////// End of Header ////////////////////////
+
+	// file
+
+	$('#file').change(function() {
+		var file = $(this).val();
+		file = file.replace(/\\/g, "/").split('/').pop();
+		$('.vacancy__file span').text(file);
+	});
+
+	// wow
+	new WOW().init();
 });

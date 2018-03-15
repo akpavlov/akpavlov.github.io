@@ -18,6 +18,10 @@
 	display: none;	
 }
 
+.show {
+	display: block!important;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////
 /////////////// lg ///////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
@@ -51,9 +55,32 @@
 	.col-lg-12 {
 		width: 100%;
 	}
+	.header {
+		&--not-sm-fixed {
+			position: fixed;
+		}
+	}
 	.city-banner {
 		&__slide-image {
 			height: 713px;
+		}
+		&--tours {
+			.city-banner__slide-image {
+				height: 941px;		
+			}
+		}
+		&__content-box {
+			padding-top: 470px;
+		}
+		&__slide-title {
+			font-size: 60px;
+			line-height: 60px;
+		}
+		&__extour-net {
+			width: 483px;
+			height: 130px;
+			background: url(../images/extour-net-lg.png) 0 0 no-repeat;
+			margin-top: 12px;
 		}
 	}
 	.filter {
@@ -72,6 +99,9 @@
 	}
 	.tour-type {
 		padding-top: 97px;
+		&--cities {
+			padding-top: 45px;
+		}
 		&__item {
 			margin-bottom: 50px;
 			&:hover {
@@ -142,6 +172,9 @@
 		&__more {
 			margin-right: 67px;
 		}
+		&--tours {
+			padding-top: 130px;
+		}
 	}
 	.testimonials__slider {
 		.owl-nav.disabled + .owl-dots {
@@ -193,6 +226,38 @@
 			}
 		}
 	}
+	.submenu {
+		&--cities {
+			ul {
+				column-count: 6;
+			}
+		}
+		&--more {
+			&>div>ul>li {
+				width: 18%;
+			}
+		}
+	}
+	.subscribe {
+		height: 619px;
+		background: url(../images/subscribe-bg-lg.jpg) 50% 0 no-repeat;
+		background-size: cover;
+		h3 {
+			font-size: 40px;
+			line-height: 36px;
+		}
+		&__form {
+			padding-left: 670px;
+			padding-right: 101px;
+		}
+	}
+	.partner {
+		&__info {
+			h4 {
+				font-size: 32px;
+			}
+		}
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -229,16 +294,37 @@
 		&__row, &__spacer {
 			height: 72px;
 		}
+		&--not-sm-fixed {
+			position: fixed;
+		}
 	}
 	.city-banner {
 		&__slide-image {
 			height: 531px;
+		}
+		&--tours {
+			.city-banner__slide-image {
+				height: 604px;
+			}	
 		}
 		&__static {
 			h1 {
 				font-size: 45px;
 				line-height: 50px;
 			}
+		}
+		&__content-box {
+			padding-top: 374px;
+		}
+		&__slide-title {
+			font-size: 42px;
+			line-height: 42px;
+		}
+		&__extour-net {
+			width: 350px;
+			height: 100px;
+			background: url(../images/extour-net-md.png) 0 0 no-repeat;
+			margin-top: 10px;
 		}
 	}
 	.filter {
@@ -349,6 +435,9 @@
 		.testimonials__slide-col-img img {
 			width: 168px;
 		}
+		&--tours {
+			padding-top: 60px;
+		}
 	}
 	.testimonials__slider {
 		.owl-nav.disabled + .owl-dots {
@@ -385,8 +474,15 @@
 		}
 	}
 	.partner {
-		p {
-			font-size: 32px;
+		&__row {
+			p {
+				font-size: 32px;
+			}
+		}
+		&__info {
+			h4 {
+				font-size: 28px;
+			}
 		}
 	}
 	.footer {
@@ -397,6 +493,82 @@
 			width: 34%;
 		}
 	}
+	.submenu {
+		&--cities {
+			ul {
+				column-count: 4;
+			}
+		}
+		&--more {
+			&>div>ul>li {
+				width: 22%;
+			}
+		}
+	}
+	.search {
+		margin-top: 60px;
+	}
+	.search-filter {
+		flex-wrap: wrap;
+		justify-content: center;
+		select {
+			margin-right: 16px;
+			&:nth-child(1) {
+				width: 135px;
+			}
+			&:nth-child(2) {
+				width: 135px;
+			}
+			&:nth-child(3) {
+				width: 163px;
+			}
+		}
+		button {
+			margin-top: 38px;
+		}
+	}
+	.master {
+		padding-top: 55px;
+		padding-bottom: 56px;
+		background: url(../images/master-md.png) 50% 62px no-repeat;
+		h2 {
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 33px;
+		}
+	}
+
+
+	.here {
+		&__slider-box {
+			margin: 0 128px;
+		}
+	}
+	.subscribe {
+		height: 553px;
+		background: url(../images/subscribe-bg-md.jpg) 50% 0 no-repeat;
+		background-size: cover;
+		h3 {
+			font-size: 36px;
+			line-height: 36px;
+			margin-bottom: 30px;
+		}
+		img {
+			margin-bottom: 30px;
+		}
+		p {
+			margin-bottom: 30px;
+		}
+		input {
+			margin-bottom: 40px;
+		}
+		&__form {
+			padding-left: 374px;
+			padding-right: 0px;
+		}
+	}
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -434,6 +606,33 @@
 			width: 100%;
 		}
 	}
+	.advantages {
+		h4 {
+			font-size: 26px;
+		}
+	}
+	.owl-theme-extour {
+		.owl-dots {
+			.owl-dot {
+				span, &:hover span {
+					margin: 5px 4px 5px 4px;
+					width: 14px;
+					height: 14px;
+				}
+				&.active span, &.active:hover span {
+					width: 18px;
+					height: 18px;
+					margin: 5px 3px 3px 2px;
+					// margin-left: 4px;
+				}
+			}
+		}
+	}
+	.city-banner__slider, .owl-theme-extour--banner  {
+		.owl-nav.disabled + .owl-dots {
+		    margin-top: -40px;
+		}
+	}	
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -456,17 +655,28 @@
 		line-height: 39px;
 	}
 	.header {
-		position: relative;
+		// position: relative;
+		&--normal {
+			position: relative;
+		}
 		&__row {
 			height: 66px;
 		}
 		&__spacer {
 			display: none;
 		}
+		&--sm-fixed {
+			position: fixed;
+		}
 	}
 	.city-banner {
 		&__slide-image {
 			height: 426px;
+		}
+		&--tours {
+			.city-banner__slide-image {
+				height: 485px;
+			}	
 		}
 		&__static {
 			h1 {
@@ -480,6 +690,19 @@
 				line-height: 20px;
 				bottom: 68px;
 			}
+		}
+		&__content-box {
+			padding-top: 320px;
+		}
+		&__slide-title {
+			font-size: 28px;
+			line-height: 28px;
+		}
+		&__extour-net {
+			width: 243px;
+			height: 77px;
+			background: url(../images/extour-net-sm.png) 0 0 no-repeat;
+			margin-top: 8px;
 		}
 	}
 	.filter {
@@ -499,11 +722,32 @@
 	}
 	.tour-type {
 		padding-top: 31px;
+		.row {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 		&__item {
 			margin-bottom: 13px;
+			height: 169px;
+			img {
+				margin-bottom: -50px;
+			}
 		}
 		h2 {
 			margin-bottom: 32px;
+		}
+		&__info {
+			h4 {
+				font-size: 26px;
+				margin-bottom: 15px;
+			}
+			p {
+				font-size: 13px;
+				line-height: 20px;
+			}
+		}
+		&__button-box {
+			margin-top: 21px;
 		}
 	}
 
@@ -611,6 +855,9 @@
 			padding-right: 15px;
 			padding-bottom: 40px;
 		}
+		&--tours {
+			padding-top: 40px;
+		}
 	}
 	.testimonials__slider {
 		.owl-nav.disabled + .owl-dots {
@@ -655,14 +902,29 @@
 		}
 	}
 	.partner {
-		img {
-			margin-bottom: 18px;
+		&__row {
+			padding-top: 30px;
+			img {
+				margin-bottom: 18px;
+			}
+			p {
+				font-size: 26px;
+				line-height: 36px;
+				width: 100%;
+				margin-bottom: 16px;
+			}
 		}
-		p {
-			font-size: 26px;
-			line-height: 36px;
+		&__info {
+			padding-top: 40px;
+			padding-bottom: 0px;
+			h4 {
+				font-size: 28px;
+			}
+		}
+		&__info-item {
 			width: 100%;
-			margin-bottom: 16px;
+			margin-bottom: 30px;
+			text-align: center;
 		}
 	}
 	.footer {
@@ -683,7 +945,130 @@
 			}
 		}
 	}
-	.sm-fixed {
-		position: fixed;
+	.submenu {
+		&--cities {
+			ul {
+				column-count: 2;
+			}
+		}
+		&--more {
+			&>div>ul>li {
+				width: 100%;
+			}
+		}
 	}
+	.search-filter {
+		&.visible {
+			display: none;
+		}
+	}
+	.master {
+		text-align: center;
+		padding-top: 32px;
+		padding-bottom: 56px;
+		background: transparent;
+		h2 {
+			font-weight: normal;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 24px;
+		}
+	}
+	.advantages {
+		margin-top: 40px;
+		padding-bottom: 20px;
+		h4 {
+			font-size: 26px;
+		}
+		&__item {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}	
+
+
+	.here {
+		padding-top: 114px;
+		margin-bottom: 52px;
+		h2 {
+			margin-bottom: 54px;
+		}
+		h4 {
+			font-family: "Yanone Kaffeesatz", sans-serif;
+			font-size: 24px;
+			font-weight: 400;
+			margin-bottom: 17px;
+		}
+		.button {
+			height: 37px;
+			font-size: 17px;
+			line-height: 33px;
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+		&__item {
+			width: 267px;
+		}
+		&__slider-box {
+			margin: 0 26px;
+		}
+		&__slider {
+			.owl-nav {
+				.owl-prev,
+				.owl-next {
+					top: 70px;
+				}
+				.owl-prev, .owl-prev:hover {
+					left: -35px;
+				}
+				.owl-next, .owl-next:hover {
+					right: -34px;
+				}
+			}
+		}
+		&__img {
+			width: 267px;
+			height: 179px;
+			border-radius: 10px;
+			overflow: hidden;
+			margin-bottom: 22px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.subscribe {
+		height: 547px;
+		background: url(../images/subscribe-bg-sm.jpg) 50% 0 no-repeat;
+		background-size: cover;
+		h3 {
+			font-size: 28px;
+			line-height: 36px;
+			margin-bottom: 20px;
+		}
+		img {
+			margin-bottom: 30px;
+		}
+		p {
+			margin-bottom: 30px;
+		}
+		input {
+			margin-bottom: 18px;
+			width: 100%;
+		}
+		button {
+			width: 100%;
+		}
+		&__form {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+
+.hide-all {
+	display: none;
 }
